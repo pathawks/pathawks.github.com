@@ -21,3 +21,14 @@ layout: nil
 </urlset>
 
 ```
+
+# Usage
+
+Put a optional lastmod date in your YAML front matter.
+
+```
+--- 
+layout: post
+title: Authenticated S3 GETs For Private Objects Using Paperclip
+lastmod: 2011-10-18
+```
