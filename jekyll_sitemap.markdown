@@ -1,4 +1,4 @@
-= A Sitemap.xml Template
+# A Sitemap.xml Template
 
 ```html
 ---
