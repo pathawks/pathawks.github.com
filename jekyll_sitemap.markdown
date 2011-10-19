@@ -34,3 +34,25 @@ lastmod: 2011-10-18
 ...
 ---
 ```
+
+# Result
+
+Would look something like this.
+
+```xml
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.sitemaps.org/schemas/sitemap-image/1.1" xmlns:video="http://www.sitemaps.org/schemas/sitemap-video/1.1">
+  ...
+  <url>
+    <loc>http://metaskills.net/2009/11/23/authenticated-s3-gets-for-private-objects-using-paperclip</loc>
+    <lastmod>2011-10-18T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://metaskills.net/2009/11/11/meta-programming-in</loc>
+    <lastmod>2009-11-11T00:00:00-05:00</lastmod>
+  </url>
+  ...
+</urlset>
+
+```
+
+
