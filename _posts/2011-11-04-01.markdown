@@ -1,0 +1,8 @@
+---
+title: Hello World
+layout: post
+---
+
+I'm trying to figure out how to get a blog going on GitHub.
+
+Please be patient as I stumble through this process...
