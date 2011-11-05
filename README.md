@@ -1,8 +1,12 @@
 alt.pathawks.com
+================
 
 This is a minimalistic, but extensible, Jekyll theme built by me for my own projects.
 
 Please fork it, play with it, make it your own.
+
+Licenses
+--------
 
 My posts (anything in the `_posts` directory) are licensed under the [Creative Commons Attribution 3.0 Unported License](http://creativecommons.org/licenses/by/3.0/).
 
