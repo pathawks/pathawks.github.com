@@ -3,7 +3,10 @@ server: true
 permalink: none
 title: alt.pathawks.com
 url: http://alt.pathawks.com
+lang: en-US
 owner: Pat Hawks
 owner_email: pat@pathawks.com
 owner_link:  http://www.pathawks.com
 baseurl: /
+license:   //creativecommons.org/licenses/by/3.0/
+copyright: //creativecommons.org/licenses/by/3.0/
