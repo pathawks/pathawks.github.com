@@ -7,8 +7,8 @@ html,body {
 	margin:0;
 	padding:0;
 }
-a {color:#424299}
-a:hover,a:focus {color:#4242ff}
+a {color:#4242cc}
+a:hover,a:focus {color:#0000ff;text-decoration:underline}
 h1 {
 	margin:0 0 0 10px;
 	padding:0;
@@ -41,10 +41,13 @@ article,.content {
 	max-width:900px;
 }
 h2,h3,h4,h5,h6,.postlist {
-	margin:0;
+	margin:1em 0 0;
 	padding:0;
 	line-height:0.8em;
 	font-family: 'Play', sans-serif;
+}
+h2:first-child,h3:first-child,h4:first-child,h5:first-child,h6:first-child {
+	margin:0;
 }
 h2 a,h3 a,h4 a,h5 a,h6 a,.postlist a {
 	text-decoration:none;
