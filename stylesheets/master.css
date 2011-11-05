@@ -34,6 +34,7 @@ nav a {
 nav a:hover {
 	background:#000;
 	color:#fff;
+	text-decoration:none;
 }
 article,.content {
 	margin:30px 0 0 140px;
@@ -49,32 +50,25 @@ h2,h3,h4,h5,h6,.postlist {
 	line-height:0.8em;
 	font-family: 'Play', sans-serif;
 }
-h2:first-child,h3:first-child,h4:first-child,h5:first-child,h6:first-child {
-	margin:0;
-}
-.postlist a {
-	text-decoration:none;
-}
 .postlist{
 	list-style:none;
 	text-indent:0;
 	margin:0;
 	padding:0;
 }
-.postlist .postdate {
+.postlist .postdate,.date {
 	font-size:0.7em;
 	color:#999;
-}
-#footer {
-	position:fixed;
-	bottom:10px;
-	left:25px;
 }
 .date {
 	position:absolute;
 	top:0;
 	right:0;
-	color:#666;
+}
+#footer {
+	position:fixed;
+	bottom:10px;
+	left:25px;
 }
 #githubbanner {
 	position: absolute;
