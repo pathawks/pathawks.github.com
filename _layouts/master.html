@@ -3,9 +3,9 @@
 	<head>
 		<title>
 			{% if page.title %}
-			   {{ site.title }} :: {{ page.title }}
+				{{ page.title }} - {{ site.title }}
 			{% else %}
-			   {{ site.title }}
+				{{ site.title }}
 			{% endif %}
 		</title>
 		<meta charset="UTF-8" />
@@ -18,13 +18,11 @@
 	<body>
 		<h1>{{ site.title }}</h1>
 		<nav>
-			<a href="/">Archives</a>
-			<a href="/projects.html">Projects</a>
-			<a href="/colophon.html">Colophon</a>
+			{% include nav.html %}
 		</nav>
 		{{ content }}
     <div id='footer'>
-      <a rel="license" href="http://creativecommons.org/licenses/by/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/80x15.png" /></a><span style='display:none'>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a>.</span>
+      {% include license.html %}
     </div>
     <a href='https://github.com/pathawks/pathawks.github.com' id='githubbanner' title='Fork me on GitHub'>Fork me on GitHub</a>
 	</body>
