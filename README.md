@@ -5,6 +5,11 @@ This is a minimalistic, but extensible, Jekyll theme built by me for my own proj
 
 Please fork it, play with it, make it your own.
 
+How to customize
+----------------
+
+When you fork it, you should probably start by editing `_config.yml`, `stylesheets/master.css`, and maybe `_includes/nav.html`,as that will get you 95% of the way to where you want to be. Only after playing around with that should you start tweaking things in the `_layouts` folder.
+
 Licenses
 --------
 
