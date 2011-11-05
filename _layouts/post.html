@@ -1,8 +1,10 @@
 ---
 layout: master
 ---
-<div class='post'>
-  <h1><a href='{{page.url}}'>{{page.title}}</a></h1>
-  <div class='date'>posted {{page.date | date_to_string}}</div>
-  <div class='body'>{{ content }}</div>
-</div>
+		<article class='hentry'>
+		  <h2 class='entry-title'>{{page.title}}</h2>
+		  <data value='{{page.date | date_to_xmlschema}}' class='date instapaper_date updated'>{{page.date | date_to_string}}</data>
+		  <div class='entry-content'>
+			  {{ content }}
+		  </div>
+		</article>
