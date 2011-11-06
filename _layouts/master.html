@@ -10,6 +10,7 @@
 		{% if site.license %}<link rel="license" href="{{ site.license }}" />{% endif %}
 		{% if site.copyright %}<link rel="copyright" href="{{ site.copyright }}" />{% endif %}
 		{% capture homeURL %}{{site.baseurl}}index.html{% endcapture %}{% if site.owner_link %}{% if page.url == homeURL %}<link rel="me" href="{{ site.owner_link }}" />{% else %}<link rel="author" href="{{ site.owner_link }}" />{% endif %}{% endif %}
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   </head>
 	<body>
 		<h1>{{ site.title }}</h1>
