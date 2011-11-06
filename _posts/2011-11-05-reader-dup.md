@@ -2,7 +2,7 @@
 title: Google Reader slop?
 layout: post
 ---
-Take a look at the code for Google Reader.
+Take a look at the `<header>` code for Google Reader.
 
 	<link href="/reader/ui/favicon.ico" rel="SHORTCUT ICON">
 	<meta name="application-name" content="Google Reader">
