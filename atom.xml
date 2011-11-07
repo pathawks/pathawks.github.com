@@ -17,7 +17,7 @@ layout: nil
    <name>{{ site.owner }}</name>
    <email>{{ site.owner_email }}</email>
  </author> 
- {% for post in site.posts %}{% unless post.feed == 'false' %}
+ {% for post in site.posts %}{% unless post.feed %}
  <entry>
    <title>{{ post.title }}</title>
    <link href="{{ siteURL }}{{ post.url }}"/>
