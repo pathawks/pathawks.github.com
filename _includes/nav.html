@@ -2,4 +2,4 @@
 <a href="/projects.html">Projects</a>
 <a href="/colophon.html">Colophon</a>
 <a href="/contact.html">Contact</a>
-<a href="/atom.xml">RSS Feed</a>
+{% if site.feedurl %}<a href="{{ site.feedurl }}">RSS Feed</a>{% else %}<a href="/atom.xml">RSS Feed</a>{% endif %}
