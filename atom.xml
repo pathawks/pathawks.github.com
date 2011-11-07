@@ -17,7 +17,7 @@ layout: nil
    <name>{{ site.owner }}</name>
    <email>{{ site.owner_email }}</email>
  </author> 
- {% for post in site.posts %}
+ {% for post in site.posts %}{% unless post.feed == 'false' %}
  <entry>
    <title>{{ post.title }}</title>
    <link href="{{ siteURL }}{{ post.url }}"/>
@@ -25,5 +25,5 @@ layout: nil
    <id>{{ siteURL }}{{ post.id }}</id>
    <content type="html">{{ post.content | xml_escape }}</content>
  </entry>
- {% endfor %}
+ {% endunless %}{% endfor %}
 </feed>
