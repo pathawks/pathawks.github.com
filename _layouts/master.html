@@ -14,14 +14,14 @@
 		<meta name="viewport" content="width=600, initial-scale=1, maximum-scale=1">
   </head>
 	<body>
-		<h1>{{ site.title }}</h1>
-		<nav>
-			{% include nav.html %}
-		</nav>
 		{{ content }}
     <div id='footer'>
       {% include license.html %}
     </div>
+		<h1>{{ site.title }}</h1>
+		<nav>
+			{% include nav.html %}
+		</nav>
     <a href='https://github.com/pathawks/pathawks.github.com' id='githubbanner' title='Fork me on GitHub'>Fork me on GitHub</a>
 	</body>
 </html>
