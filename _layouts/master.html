@@ -11,7 +11,7 @@
 		<link rel="stylesheet" href="/stylesheets/master.css" type="text/css" media="screen" />
 		{% if site.feedurl %}<link rel="alternate" type="application/atom+xml" href="{{ site.feedurl }}" />{% else %}<link rel="alternate" type="application/atom+xml" href="/atom.xml" />{% endif %}
 		{% capture homeURL %}{{site.baseurl}}index.html{% endcapture %}{% if site.owner_link %}{% if page.url == homeURL %}<link rel="me" href="{{ site.owner_link }}" />{% else %}<link rel="author" href="{{ site.owner_link }}" />{% endif %}{% endif %}
-		<meta name="viewport" content='width=600, initial-scale=1, maximum-scale=1'>
+		<meta name="viewport" content='width=device-width, initial-scale=1, maximum-scale=1'>
   </head>
 	<body>
 		{{ content }}

@@ -6,5 +6,7 @@ layout: master
 		  <data value='{{page.date | date_to_xmlschema}}' class='date instapaper_date updated'>{{page.date | date_to_string}}</data>
 		  <div class='entry-content'>
 			  {{ content }}
+			  {% if post.mediagazer %}<p class="refrence mediagazer"><a href='{% post.mediagazer %}'>Read more at Mediagazer</a></p>{% endif %}
+			  {% if post.techmeme %}<p class="refrence techmeme"><a href='{% post.techmeme %}'>Read more at Techmeme</a></p>{% endif %}
 		  </div>
 		</article>
