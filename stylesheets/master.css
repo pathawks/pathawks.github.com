@@ -11,10 +11,11 @@ a {color:#424299;text-decoration:none}
 a:hover,a:focus {color:#0000ff;text-decoration:underline}
 p a {text-decoration:underline}
 h1 {
-	margin:0 0 0 10px;
+	margin:0;
 	padding:0;
 	color:#666;
 	font-family: 'Play', sans-serif;
+	position:absolute;top:5px;left:5px;
 }
 nav {
 	position:fixed;
@@ -40,7 +41,7 @@ nav a:hover {
 	text-decoration:none;
 }
 article,.content {
-	margin:30px 0 100px 140px;
+	margin:89px 0 100px 140px;
 	position:relative;
 	max-width:900px;
 }
@@ -97,4 +98,21 @@ pre code {
 
 @media screen and (max-device-width: 640px) {
 	#githubbanner {display:none}
+	article,.content {
+		margin-left:0;
+		position:relative;
+		width:100%;
+	}
+	nav {
+		position:relative;
+		left:0;
+		top:0;
+	}
+	nav a {
+		margin-right:10%;
+		font-size:0.6em;
+		width:40%;
+		float:left;
+		text-align:center;
+	}
 }
