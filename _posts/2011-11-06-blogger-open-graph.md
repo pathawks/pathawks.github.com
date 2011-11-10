@@ -20,4 +20,4 @@ A couple notes:
 
 *   If you're using your blog as a personal profile, you may consider changing the second `og:type` from `website` to `profile` and adding [your personal information](http://ogp.me/#type_profile)
 
-*   `og:image` Is only supplied if Blogger finds an image in the current post. However, not supplying `og:image` is invalid. You could provide an alternate image to
+*   `og:image` Is only supplied if Blogger finds an image in the current post. However, not supplying `og:image` is invalid. You could provide an alternate image of your blog logo, or a Gravatar.
