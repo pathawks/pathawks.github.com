@@ -9,6 +9,7 @@ Who am I kidding? Nobody ever uses RDFa Doctypes.
 Fortunately for [Blogger](http://blogger.com) users, Blogger blogs never validate anyway, so adding Open Graph metadata is easy.
 
 Simply copy the code below and paste it into your template after the `<header>` tag.
+<script src="https://gist.github.com/1343315.js"></script><noscript>
 
 	<!-- Begin Open Graph metadata -->
 	<b:if cond='data:blog.pageType == &quot;item&quot;'>
@@ -26,6 +27,7 @@ Simply copy the code below and paste it into your template after the `<header>` 
 	<meta expr:content='data:blog.canonicalUrl' property='og:url'/>
 	<!-- End Open Graph metadata -->
 
+</noscript>
 I've added this code to [a Gist](https://gist.github.com/1343315), so feel free to fork it and modify it as you see fit. If you do something really cool, I'd love to hear about it.
 
 A couple notes:
