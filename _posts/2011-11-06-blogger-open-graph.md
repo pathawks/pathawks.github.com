@@ -9,7 +9,7 @@ Who am I kidding? Nobody ever uses RDFa Doctypes.
 Fortunately for [Blogger](http://blogger.com) users, Blogger blogs never validate anyway, so adding Open Graph metadata is easy.
 
 Simply copy the code below and paste it into your template after the `<header>` tag.
-{% render_gist https://gist.github.com/raw/1343315/0f2175ab456cb40a87cc97e7d31900f5d622ed90/gistfile1.phtml }
+{% render_gist https://gist.github.com/raw/1343315/0f2175ab456cb40a87cc97e7d31900f5d622ed90/gistfile1.phtml %}
 <script src="https://gist.github.com/1343315.js">
 </script>
 
