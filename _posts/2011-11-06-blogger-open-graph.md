@@ -10,23 +10,7 @@ Fortunately for [Blogger](http://blogger.com) users, Blogger blogs never validat
 
 Simply copy the code below and paste it into your template after the `<header>` tag.
 <script src="https://gist.github.com/1343315.js">
-</script><noscript><code><pre>
-<!-- Begin Open Graph metadata -->
-<b:if cond='data:blog.pageType == &quot;item&quot;'>
-	<meta content='article' property='og:type'/>
-	<meta expr:content='data:blog.title' property='og:site_name'/>
-	<meta expr:content='data:blog.pageName' property='og:title'/>
-	<b:if cond='data:blog.postImageThumbnailUrl'>
-		<meta expr:content='data:blog.postImageThumbnailUrl' property='og:image'/>
-	</b:if>
-<b:else/>
-	<meta expr:content='data:blog.title' property='og:title'/>
-	<meta content='website' property='og:type'/>
-</b:if>
-<meta expr:content='&quot;en_US&quot;' property='og:locale'/>
-<meta expr:content='data:blog.canonicalUrl' property='og:url'/>
-<!-- End Open Graph metadata -->
-</code><pre></noscript>
+</script>
 
 I've added this code to [a Gist](https://gist.github.com/1343315), so feel free to fork it and modify it as you see fit. If you do something really cool, I'd love to hear about it.
 
