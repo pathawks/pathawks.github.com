@@ -6,7 +6,7 @@ layout: nil
 {% if site.url %}
 {% assign siteURL = site.url %}
 {% else %}
-{% assign siteURL = site.baseurl %}
+{% assign siteURL = site.root %}
 {% endif %}
  <title>{{ site.title }}</title>
  <link href="{{ siteURL }}/atom.xml" rel="self"/>
@@ -14,8 +14,8 @@ layout: nil
  <updated>{{ site.time | date_to_xmlschema }}</updated>
  <id>{{ siteURL }}/</id>
  <author>
-   <name>{{ site.owner }}</name>
-   <email>{{ site.owner_email }}</email>
+   <name>{{ site.author }}</name>
+   <email>{{ site.email }}</email>
  </author> 
  {% for post in site.posts %}{% unless post.hide %}
  <entry>
