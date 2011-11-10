@@ -10,8 +10,7 @@ Fortunately for [Blogger](http://blogger.com) users, Blogger blogs never validat
 
 Simply copy the code below and paste it into your template after the `<header>` tag.
 
-<script src="https://gist.github.com/1343315.js">
-</script>
+{% gist 1343315 gistfile1.phtml %}
 
 I've added this code to [a Gist](https://gist.github.com/1343315), so feel free to fork it and modify it as you see fit. If you do something really cool, I'd love to hear about it.
 
