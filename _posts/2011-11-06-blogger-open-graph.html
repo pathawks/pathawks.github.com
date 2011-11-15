@@ -1,0 +1,38 @@
+---
+title: Open Graph data in Blogger
+layout: post
+---
+<p>Adding <a href='http://ogp.me/'>Open Graph metadata</a> to a website can be a pain, and will almost certainly break your validation unless you&#8217;re using an RDFa Doctype…</p>
+<p>Who am I kidding? Nobody ever uses RDFa Doctypes.</p>
+<p>Fortunately for <a href='http://blogger.com'>Blogger</a> users, Blogger blogs never validate anyway, so adding Open Graph metadata is easy.</p>
+<p>Simply copy the code below and paste it into your template after the <code>&lt;header&gt;</code> tag.</p>
+<script src='https://gist.github.com/1343315.js?file=og.html'>
+</script>
+<noscript>
+<link rel="stylesheet" href="https://gist.github.com/stylesheets/gist/embed.css" />
+<div id="gist-1343315" class="gist">
+<div class="gist-file">
+<div class="gist-data gist-syntax">
+<div class="gist-highlight"><pre><div class="line" id="LC1"><span class="c">&lt;!-- Begin Open Graph metadata --&gt;</span></div><div class="line" id="LC2"><span class="nt">&lt;b:if</span> <span class="na">cond=</span><span class="s">'data:blog.pageType == &amp;quot;item&amp;quot;'</span><span class="nt">&gt;</span></div><div class="line" id="LC3">	<span class="nt">&lt;meta</span> <span class="na">content=</span><span class="s">'article'</span> <span class="na">property=</span><span class="s">'og:type'</span><span class="nt">/&gt;</span></div><div class="line" id="LC4">	<span class="nt">&lt;meta</span> <span class="na">expr:content=</span><span class="s">'data:blog.title'</span> <span class="na">property=</span><span class="s">'og:site_name'</span><span class="nt">/&gt;</span></div><div class="line" id="LC5">	<span class="nt">&lt;meta</span> <span class="na">expr:content=</span><span class="s">'data:blog.pageName'</span> <span class="na">property=</span><span class="s">'og:title'</span><span class="nt">/&gt;</span></div><div class="line" id="LC6">	<span class="nt">&lt;b:if</span> <span class="na">cond=</span><span class="s">'data:blog.postImageThumbnailUrl'</span><span class="nt">&gt;</span></div><div class="line" id="LC7">		<span class="nt">&lt;meta</span> <span class="na">expr:content=</span><span class="s">'data:blog.postImageThumbnailUrl'</span> <span class="na">property=</span><span class="s">'og:image'</span><span class="nt">/&gt;</span></div><div class="line" id="LC8">	<span class="nt">&lt;/b:if&gt;</span></div><div class="line" id="LC9"><span class="nt">&lt;b:else/&gt;</span></div><div class="line" id="LC10">	<span class="nt">&lt;meta</span> <span class="na">expr:content=</span><span class="s">'data:blog.title'</span> <span class="na">property=</span><span class="s">'og:title'</span><span class="nt">/&gt;</span></div><div class="line" id="LC11">	<span class="nt">&lt;meta</span> <span class="na">content=</span><span class="s">'website'</span> <span class="na">property=</span><span class="s">'og:type'</span><span class="nt">/&gt;</span></div><div class="line" id="LC12"><span class="nt">&lt;/b:if&gt;</span></div><div class="line" id="LC13"><br></div><div class="line" id="LC14"><span class="nt">&lt;meta</span> <span class="na">expr:content=</span><span class="s">'&amp;quot;en_US&amp;quot;'</span> <span class="na">property=</span><span class="s">'og:locale'</span><span class="nt">/&gt;</span></div><div class="line" id="LC15"><span class="nt">&lt;meta</span> <span class="na">expr:content=</span><span class="s">'data:blog.canonicalUrl'</span> <span class="na">property=</span><span class="s">'og:url'</span><span class="nt">/&gt;</span></div><div class="line" id="LC16"><span class="c">&lt;!-- End Open Graph metadata --&gt;</span></div></pre></div>
+</div>
+<div class="gist-meta">
+<a href="https://gist.github.com/raw/1343315/a4a4f696bcfdbb3a16c88abde8a7913db3d33785/og.html" style="float:right;">view raw</a>
+<a href="https://gist.github.com/1343315#file_og.html" style="float:right;margin-right:10px;color:#666">og.html</a>
+<a href="https://gist.github.com/1343315">This Gist</a> brought to you by <a href="http://github.com">GitHub</a>.
+</div>
+</div>
+</div>
+</noscript>
+<p>I&#8217;ve added this code to <a href='https://gist.github.com/1343315'>a Gist</a>, so feel free to fork it and modify it as you see fit. If you do something really cool, I&#8217;d love to hear about it.</p>
+<p>A couple notes:</p>
+<ul>
+	<li>
+		<p><code>og:locale</code> Should probably actually reflect the blog&#8217;s locale instead of just being a hardcoded string. Unfortunately, Blogger only gives us <code>en-us</code> with a hyphen, instead of an underscore, so that won&#8217;t work.</p>
+	</li>
+	<li>
+		<p>If you&#8217;re using your blog as a personal profile, you may consider changing the second <code>og:type</code> from <code>website</code> to <code>profile</code> and adding <a href='http://ogp.me/#type_profile'>your personal information</a></p>
+	</li>
+	<li>
+		<p><code>og:image</code> Is only supplied if Blogger finds an image in the current post. However, not supplying <code>og:image</code> is invalid. You could provide an alternate image of your blog logo, or a Gravatar.</p>
+	</li>
+</ul>
