@@ -70,7 +70,7 @@ p {
 .date {
 	position:absolute;
 	top:0;
-	right:0;
+	right:50px;
 }
 pre code {
 	display:block;
