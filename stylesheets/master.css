@@ -44,7 +44,7 @@ article,.content {
 	margin:89px 0 100px 140px;
 	position:relative;
 	max-width:900px;
-	min-width:400px;
+	min-width:320px;
 }
 h2,h3,h4,h5,h6,.postlist,.date {
 	margin:1em 0 0.5em;
@@ -102,10 +102,12 @@ pre code {
 }
 
 @media screen and (max-device-width: 640px) {
-	#githubbanner {display:none}
+	#githubbanner,#footer {display:none}
 	article,.content {
-		margin-left:0;
+		margin-left:3px;
+		margin-right:3px;
 		position:relative;
+		min-width:220px;
 		width:100%;
 	}
 	nav {
@@ -114,10 +116,8 @@ pre code {
 		top:0;
 	}
 	nav a {
-		margin-right:10%;
-		font-size:0.6em;
-		width:40%;
-		float:left;
+		margin:0 3px 0.5em;
+		font-size:1em;
 		text-align:center;
 	}
 }
