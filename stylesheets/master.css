@@ -44,6 +44,7 @@ article,.content {
 	margin:89px 0 100px 140px;
 	position:relative;
 	max-width:900px;
+	min-width:400px;
 }
 h2,h3,h4,h5,h6,.postlist,.date {
 	margin:1em 0 0.5em;
