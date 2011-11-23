@@ -1,17 +1,7 @@
 <!DOCTYPE html>
 <html{% if site.lang %} lang='{{site.lang}}'{% endif %}>
 	<head>
-		<title>
-			{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}
-		</title>
-		<meta charset="UTF-8" />
-		{% if page.date %}<meta name="dc.date.issued" content="{{page.date | date_to_xmlschema}}" />{% endif %}
-		{% if site.license %}<link rel="license" href="{{ site.license }}" />{% endif %}
-		{% if site.copyright %}<link rel="copyright" href="{{ site.copyright }}" />{% endif %}
-		<link rel="stylesheet" href="/stylesheets/master.css" type="text/css" media="screen" />
-		{% if site.subscribe_rss %}<link rel="alternate" type="application/atom+xml" href="{{ site.subscribe_rss }}" />{% else %}<link rel="alternate" type="application/atom+xml" href="/atom.xml" />{% endif %}
-		{% capture homeURL %}{{site.root}}index.html{% endcapture %}{% if site.owner_link %}{% if page.url == homeURL %}<link rel="me" href="{{ site.owner_link }}" />{% else %}<link rel="author" href="{{ site.owner_link }}" />{% endif %}{% endif %}
-		<meta name="viewport" content='width=device-width, initial-scale=1, maximum-scale=1'>
+    {% include header.html %}
   </head>
 	<body>
 		{{ content }}
@@ -22,21 +12,7 @@
 		<nav>
 			{% include nav.html %}
 		</nav>
-    <a href='https://github.com/pathawks/pathawks.github.com' id='githubbanner' title='Fork me on GitHub'>Fork me on GitHub</a>
-		{% if site.google_analytics_tracking_id %}
-			<script type="text/javascript">
-			
-			  var _gaq = _gaq || [];
-			  _gaq.push(['_setAccount', '{{ site.google_analytics_tracking_id }}']);
-			  _gaq.push(['_trackPageview']);
-			
-			  (function() {
-			    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-			    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-			    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-			  })();
-			
-			</script>
-		{% endif %}
+    {% include github.html %}
+		{% include analytics.html %}
 	</body>
 </html>

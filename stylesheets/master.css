@@ -95,6 +95,10 @@ pre code {
 	width:140px;
 	border-radius: 0 0 0 140px;
 }
+.refrence {
+	margin:1em 0 0;
+	text-indent:0;
+}
 
 @media screen and (max-device-width: 640px) {
 	#githubbanner {display:none}

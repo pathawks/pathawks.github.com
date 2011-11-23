@@ -1,0 +1,11 @@
+<title>
+	{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}
+</title>
+<meta charset="UTF-8" />
+{% if page.date %}<meta name="dc.date.issued" content="{{page.date | date_to_xmlschema}}" />{% endif %}
+{% if site.license %}<link rel="license" href="{{ site.license }}" />{% endif %}
+{% if site.copyright %}<link rel="copyright" href="{{ site.copyright }}" />{% endif %}
+<link rel="stylesheet" href="/stylesheets/master.css" type="text/css" media="screen" />
+{% if site.subscribe_rss %}<link rel="alternate" type="application/atom+xml" href="{{ site.subscribe_rss }}" />{% else %}<link rel="alternate" type="application/atom+xml" href="/atom.xml" />{% endif %}
+{% capture homeURL %}{{site.root}}index.html{% endcapture %}{% if site.owner_link %}{% if page.url == homeURL %}<link rel="me" href="{{ site.owner_link }}" />{% else %}<link rel="author" href="{{ site.owner_link }}" />{% endif %}{% endif %}
+<meta name="viewport" content='width=device-width, initial-scale=1, maximum-scale=1'>
