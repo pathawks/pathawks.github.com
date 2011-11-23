@@ -102,10 +102,9 @@ pre code {
 }
 
 @media screen and (max-device-width: 640px) {
-	#githubbanner,#footer {display:none}
+	#githubbanner,#footer,.date {display:none}
 	article,.content {
-		margin-left:3px;
-		margin-right:3px;
+		margin:89px 5px 10px;
 		position:relative;
 		min-width:220px;
 		width:100%;
@@ -116,8 +115,9 @@ pre code {
 		top:0;
 	}
 	nav a {
-		margin:0 3px 0.5em;
+		margin:0 auto 0.5em;
 		font-size:1em;
 		text-align:center;
+		width:80%;
 	}
 }
