@@ -8,7 +8,7 @@ layout: master
 					<data value='{{page.date | date_to_xmlschema}}' class='date instapaper_date updated'>{{page.date | date_to_string}}</data>
 				</a>
 				{% if site.googleplus_user %}<a href='https://plus.google.com/{{ site.googleplus_user }}?rel=author' class='author' rel='author'>{{ site.author }}</a>{% endif %}
-			<header>
+			</header>
 			<div class='entry-content'>
 				{{ content }}
 				{% if page.mediagazer %}<p class="refrence mediagazer"><a href='{{ page.mediagazer }}'>Read more at Mediagazer</a></p>{% endif %}
