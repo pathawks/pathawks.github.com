@@ -1,5 +1,13 @@
+{% capture navbar %}
+
 <a href="{{ site.root }}">Archive</a>
 <a href="{{ site.root }}projects.html">Projects</a>
 <a href="{{ site.root }}colophon.html">Colophon</a>
 <a href="{{ site.root }}contact.html">Contact</a>
-{% if site.subscribe_rss %}<a href="{{ site.subscribe_rss }}">RSS Feed</a>{% else %}<a href="{{ site.root }}atom.xml">RSS Feed</a>{% endif %}
+{% if site.subscribe_rss %}
+	<a href="{{ site.subscribe_rss }}">RSS Feed</a>
+{% else %}
+	<a href="{{ site.root }}atom.xml">RSS Feed</a>
+{% endif %}
+
+{% endcapture %}{{ navbar | strip_newlines }}

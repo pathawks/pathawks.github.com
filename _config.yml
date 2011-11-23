@@ -64,7 +64,7 @@ default_asides: [asides/recent_posts.html, asides/github.html, asides/twitter.ht
 # ----------------------- #
 
 # Github repositories
-github_user:
+github_user: pathawks
 github_repo_count: 0
 github_show_profile_link: true
 github_skip_forks: true
@@ -87,11 +87,11 @@ googleplus_user: 102057071740749981761
 googleplus_hidden: false
 
 # Pinboard
-pinboard_user:
+pinboard_user: pathawks
 pinboard_count: 3
 
 # Delicious
-delicious_user:
+delicious_user: pathawks
 delicious_count: 3
 
 # Disqus Comments
