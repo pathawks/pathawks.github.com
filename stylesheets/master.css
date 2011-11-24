@@ -109,6 +109,9 @@ pre code {
 
 @media screen and (max-device-width: 640px) {
 	#githubbanner,#footer,.date,nav a {display:none}
+	h1 {
+		text-align:right;
+	}
 	article,.content {
 		margin:60px 5px 10px;
 		position:relative;
