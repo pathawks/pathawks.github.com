@@ -107,6 +107,10 @@ pre code {
 	text-indent:0;
 }
 
+.embedly_tweet_content .author{display:inline}
+.embedly_tweet_content p {text-indent:0}
+.embedly_tweet_content span {font-family: 'Play', sans-serif;}
+
 @media screen and (max-device-width: 640px) {
 	#githubbanner,#footer,.date,nav a {display:none}
 	h1 {
