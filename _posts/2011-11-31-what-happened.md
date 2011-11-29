@@ -1,5 +1,6 @@
 ---
 title: Whatever happend to...
+layout: post
 hide: True
 ---
 ### FaceTime
