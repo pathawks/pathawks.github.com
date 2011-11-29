@@ -17,13 +17,15 @@ layout: nil
    <name>{{ site.author }}</name>
    <email>{{ site.email }}</email>
  </author> 
- {% for post in site.posts %}{% unless post.hide %}
- <entry>
-   <title>{{ post.title }}</title>
-   <link href="{{ siteURL }}{{ post.url }}"/>
-   <updated>{{ post.date | date_to_xmlschema }}</updated>
-   <id>{{ siteURL }}{{ post.id }}</id>
-   <content type="html">{{ post.content | xml_escape }}</content>
- </entry>
- {% endunless %}{% endfor %}
+ {% for post in site.posts %}
+	 {% unless post.hide %}
+		 <entry>
+		   <title>{{ post.title }}</title>
+		   <link href="{{ siteURL }}{{ post.url }}"/>
+		   <updated>{{ post.date | date_to_xmlschema }}</updated>
+		   <id>{{ siteURL }}{{ post.id }}</id>
+		   <content type="html">{{ post.content | xml_escape }}</content>
+		 </entry>
+	 {% endunless %}
+ {% endfor %}
 </feed>
