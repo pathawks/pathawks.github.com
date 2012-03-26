@@ -6,6 +6,7 @@ html,body {
 	font-family: 'Sorts Mill Goudy', serif;
 	margin:0;
 	padding:0;
+	text-rendering: optimizeLegibility;
 }
 a {color:#424299;text-decoration:none}
 a:hover,a:focus {color:#0000ff;text-decoration:underline}
