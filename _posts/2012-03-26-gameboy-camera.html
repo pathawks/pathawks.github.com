@@ -27,38 +27,31 @@ Required Software (For OS X)</p>
 <a href="http://funtoshop.sourceforge.net/">Funtoshop</a> by baletandesu (optional)</li><li>
 Some basic image editing application like Pixelmator or Gimp.</li>
 </ul>
-
 <h2>Step 1: Take a bunch of photos with the Game Boy Camera</h2><p>
 This step is fairly obvious, so I shan't spend much time on this.<br />
 I <em>would</em> encourage you to experiment with <em>all</em> features the Game Boy Camera has to offer, including trick lenses and stamps.
 </p><p>
 The borders that you set on the camera will not automatically transfer to your computer, but I will show you how to add them later.
 </p>
-
 <h2>Step 2: Backup the Game Boy Camera to the Mega Memory Card</h2><p>
 First, plug the Mega Memory Card into your Game Boy. Then, plug the Game Boy Camera into the back of the Mega Memory Card. It's a tight fit, but it should slide on without problem.</p><p>
 Now, turn on the Game Boy and, at the Mega Memory Card main menu, select <b>Backup</b>. The process should take ~5-10 seconds. If it only takes a second or two, or if the Game Boy didn't turn on the first time, the Game Boy Camera may be loose. Make sure it is connected tightly and properly and try again.</p><p>
 Once you are finished, you may turn off the Game Boy and remove the Game Boy Camera from the Mega Memory Card.</p>
-
 <h2>Step 3: 'Restore' the photos to the GB USB Smart Card</h2><p>
 Plug the GB USB Smart Card into the Mega Memory Card, turn on the Game Boy, and use the <b>Restore</b> menu to copy the Game Boy Camera save data to the GB USB Smart Card. Again, this should take ~5-10 seconds. If it finishes in just a second or two, of if the Game Boy won't start, it means the GB USB Smart Card is not properly inserted into the Mega Memory Card. On my unit, I have to hold my finger tip between the Mega Memory Card and the GB USB Smart Card to add a little extra pressure to the contacts for a good, solid connection.</p>
-
 <h2>Step 4: Dump the game save to your computer</h2>
 <p>Disconnect the GB USB Smart Card from the Mega Memory Card and connect it to your computer via USB.</p><p>
 Open the <strong>Terminal</strong> application on your Mac, and use your mad Unix skillz to navigate to the folder where you saved EMS Flasher. If you were lazy, and just extracted it to your default Download folder, you would enter the following command in the terminal.</p>
 <div><pre><code>cd ~/Downloads
 ./ems-flasher --read "photos.sav"</code></pre></div>
-
 <h2>Step 5: Extract the photos from the game save</h2><p>
 There are a couple ways to perform this step. I think the best is to use <strong>GBCamera Dump</strong>, but to use this program on OS X, you will need to use Wine (or <a href="http://wineskin.doh123.com/">Wineskin</a> or <a href="http://winebottler.kronenberg.org/">WineBottler</a>). If this is not an option for whatever reason, you can <a href="http://gieskes.nl/gameboy-camera/sav-converter/">upload the Game Boy Camera save data to this website</a> and it will export the pictures as a GIF.</p><p>
 Anyway, using GBCamera Dump is easy enough. Just run the program, open the Game Boy Camera save file, and extract any/all of the photos you want to save. You can even extract the game face. The photos will be exported to a simple 128×112 4-shade .bmp image file.</p><p>
 The exported photos will not include any sort of border, so if you are interested in that, we will need to add that in the next step.</p>
-
 <h2>Step 6: Add border and resize image (Optional)</h2><p>
 If you'd like to add a bit of Game Boy Printer flair to your images, you can add different borders around your photos. This is how the photos look on the Game Boy screen, as well as when printed with the Game Boy Printer.</p><p>
 All of the borders that are included on the Game Boy Camera can be downloaded with a program called Funtoshop. You don't actually need to install the program, just unzip the install file and the borders are in the folder.</p><p>
-All you need to do is open the border in your favorite image editor (I use Pixelmator) and paste your Game Boy Camera photo into the center of the border.</p><p><br />
-
+All you need to do is open the border in your favorite image editor (I use Pixelmator) and paste your Game Boy Camera photo into the center of the border.<br /></p><p>
 If you plan on sharing your Game Boy Camera photos online, you may want to enlarge the images so they're not postage stamp size. The best way to do this is by doubling or tripling (or quadrupling) the resolution. You should also turn interpolation off. This will keep the photo nice and pixelated instead of trying to fuzz it up.</p>
 <div>
 <a href="http://www.flickr.com/photos/pathawks/6832489653/" title="Spike by Pat Hawks, on Flickr"><img src="http://farm8.staticflickr.com/7011/6832489653_cbbfaa7a45_o.png" width="160" height="144" alt="Spike"></a>
