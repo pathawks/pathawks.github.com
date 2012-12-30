@@ -1,0 +1,20 @@
+---
+title: "JPEG (old-style)" and Flickr
+layout: post
+---
+<p>I'm a data geek.<br />
+As such, I love digging into things like the EXIF data saved to my photos by my camera.</p>
+<p>Flickr has quite a nice (though extraordinarily basic) interface for viewing metadata from uploaded photos.<br />
+I love it.<br />
+It works quite well.<br />
+Except for the way it handles one little tag.</p>
+<p><code>Compression: JPEG (old-style)</code></p>
+<p>I realize that I shouldn't let this bother me at all, my photos still display properly after all. Unfortunately, I'm just not the type of person who can let this go, so I did a little digging to figure out what made my JPEGs inferior to the presumed "New-Style".</p>
+<p>Flickr is getting this compression information, not from some elaborate algorithm to figure out how the image was encoded, but from a simple flag set in the EXIF metadata.<br />
+<a href="http://owl.phy.queensu.ca/~phil/exiftool/TagNames/EXIF.html#Compression">Compression</a>.</p>
+<p>Now, according to the <a href="http://www.cipa.jp/english/hyoujunka/kikaku/pdf/DC-008-2010_E.pdf">EXIF specification</a>, there is one and only one proper value for this tag.<br />
+6<br />
+Yes, the number 6.</p>
+Oh, sure, there are times when you would want to set this to something else. Like, for instance, when you use some <a href="http://stackoverflow.com/questions/5733867/jpeg-from-tiff-jpeg-compressed">witchcraft to embed JPEG data inside a TIFF wrapper</a> (instead of just embedding a regular JFIF-wrapped JPEG in a TIFF wrapper), you would set this value to 7.</p>
+<p>This is the new style of embedding JPEG data in a TIFF.</p>
+<p>Since this "New Style" has absolutely nothing to do with how the JPEG itself is encoded, and has no place in JFIF wrapped JPEGs, Flickr's wording of "(old-style)" to refer to plain old JPEGs seems inappropriate. Simply "JPEG" would seem much more accurate.</p>
