@@ -4,19 +4,19 @@ layout: minify
 <!DOCTYPE html>
 <html{% if site.lang %} lang='{{site.lang}}'{% endif %}>
 	<head>
-    {% include header.html %}
-    {% include ogp.html %}
-  </head>
+		{% include header.html %}
+		{% include ogp.html %}
+	</head>
 	<body>
 		{{ content }}
-    <div id='footer'>
-      {% include license.html %}
-    </div>
+		<div id='footer'>
+			{% include license.html %}
+		</div>
 		<h1>{{ site.title }}</h1>
 		<nav>
 			{% include nav.html %}
 		</nav>
-    {% include github.html %}
+		{% include github.html %}
 		{% include analytics.html %}
 	</body>
 </html>
