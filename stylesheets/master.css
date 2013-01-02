@@ -112,7 +112,8 @@ pre code {
 .embedly_tweet_content p {text-indent:0}
 .embedly_tweet_content span {font-family: 'Play', sans-serif;}
 
-.emoji {font-family:'Apple Color Emoji';display:inline-block;text-indent:.3em}
+.emoji {display:none}
+.csstransforms3d .emoji {font-family:'Apple Color Emoji';display:inline-block;text-indent:.3em}
 
 @media screen and (max-device-width: 640px) {
 	#githubbanner,#footer,.date,nav a {display:none}
