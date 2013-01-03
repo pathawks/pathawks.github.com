@@ -1,6 +1,4 @@
-@import url('//fonts.googleapis.com/css?family=Sorts+Mill+Goudy:400,400italic');
-@import url('//fonts.googleapis.com/css?family=Play:400,700');
-@import url('//fonts.googleapis.com/css?family=Source+Code+Pro:400,700');
+@import url('//fonts.googleapis.com/css?family=Sorts+Mill+Goudy:400,400italic|Source+Code+Pro:400,700|Play:400,700');
 
 html,body {
 	background:#eee;
