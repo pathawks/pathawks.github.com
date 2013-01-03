@@ -85,7 +85,7 @@ pre code {
 	margin: 0 0 0 3em;
 }
 code,.gist .gist-file, .gist .gist-file .gist-data pre {
-	font-family: 'Source Code Pro', monospace!important;
+	font-family: 'Source Code Pro', Menlo, monospace!important;
 }
 #footer {
 	position:fixed;
