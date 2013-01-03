@@ -1,4 +1,4 @@
-@import url('//fonts.googleapis.com/css?family=Sorts+Mill+Goudy:400,400italic|Source+Code+Pro:400,700|Play:400,700');
+@import url('//fonts.googleapis.com/css?family=Sorts+Mill+Goudy:400,400italic|Source+Code+Pro:400,700|Play:400');
 
 html,body {
 	background:#eee;
@@ -16,6 +16,7 @@ h1 {
 	padding:0;
 	color:#666;
 	font-family: 'Play', sans-serif;
+	font-weight:normal;
 	position:absolute;top:5px;left:5px;
 }
 nav {
@@ -52,6 +53,7 @@ h2,h3,h4,h5,h6,.postlist,.date {
 	padding:0;
 	line-height:0.8em;
 	font-family: 'Play', sans-serif;
+	font-weight:normal;
 }
 .entry-title {margin-top:0}
 p {
