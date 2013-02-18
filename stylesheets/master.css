@@ -89,6 +89,13 @@ pre code {
 code,.gist .gist-file, .gist .gist-file .gist-data pre {
 	font-family: 'Source Code Pro', Menlo, monospace!important;
 }
+
+blockquote {
+	border-left: 2px solid #999;
+	padding-left: 1em;
+	margin-left: 2em;
+}
+
 #footer {
 	position:fixed;
 	bottom:10px;
