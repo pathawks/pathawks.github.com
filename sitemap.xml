@@ -1,8 +1,7 @@
 ---
 layout: nil
 ---
-{% capture sitemap %}
-<?xml version="1.0" encoding="UTF-8"?>
+{% capture sitemap %}<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.sitemaps.org/schemas/sitemap-image/1.1" xmlns:video="http://www.sitemaps.org/schemas/sitemap-video/1.1">
   {% for post in site.posts %}
 		  <url>
@@ -15,4 +14,4 @@ layout: nil
 		  </url>
   {% endfor %}
 </urlset>
-{% endcapture %}{{ sitemap | replace:'\n','' }}
+{% endcapture %}{{ sitemap | replace:'\n','' | replace:'\n','' | replace:'\n','' }}
