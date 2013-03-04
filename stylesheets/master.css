@@ -120,9 +120,7 @@ blockquote {
 	text-indent:0;
 }
 
-.embedly_tweet_content .author{display:inline}
-.embedly_tweet_content p {text-indent:0}
-.embedly_tweet_content span {font-family: 'Play', sans-serif;}
+.twitter-tweet-rendered {margin-left:auto;margin-right:auto}
 
 html .emoji {display:none}
 html.emoji .emoji {font-family:'Apple Color Emoji';display:inline-block;text-indent:.3em}
