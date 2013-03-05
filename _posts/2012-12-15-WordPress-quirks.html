@@ -4,8 +4,8 @@ layout: post
 ---
 I am getting really aggravated by WordPress's quirks.
 
-```
-<?php
+```php
+&lt;?php
 /*
  * WHAT DOES THIS CODE DO?
  *
@@ -19,8 +19,8 @@ I am getting really aggravated by WordPress's quirks.
  *
  */
 $post_categories = get_categories( array(
-    'exclude' => array( 1, 6 ), // Page and chapter categories
-    'orderby' => 'id',
+    'exclude' =&gt; array( 1, 6 ), // Page and chapter categories
+    'orderby' =&gt; 'id',
 ) );
 $post_categories = wp_list_pluck( $post_categories, 'cat_ID' );
  
