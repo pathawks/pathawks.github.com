@@ -4,7 +4,8 @@ layout: post
 ---
 I am getting really aggravated by WordPress's quirks.
 
-{% highlight php %}
+<script src="https://gist.github.com/4301755.js"></script>
+<noscript>{% highlight php %}
 <?php
 /*
  * WTF DOES THIS CODE DO?
@@ -52,7 +53,7 @@ if ( ! is_single() || is_attachment() ) {
 	$first_post  = array_shift( get_posts( array('numberposts' => 1, 'category__not_in' => $page_categories, 'order' => 'ASC',  'update_post_term_cache' => false, 'update_post_meta_cache' => false) ) );
 	$latest_post = array_shift( get_posts( array('numberposts' => 1, 'category__not_in' => $page_categories, 'order' => 'DESC', 'update_post_term_cache' => false, 'update_post_meta_cache' => false) ) );
 }
-{% endhighlight %}
+{% endhighlight %}</noscript>
 
 <p><br />
 <a href="http://core.trac.wordpress.org/ticket/22950" title="Ticket #22950">Ticket #22950: get_boundary_post Does not return single post object</a><br />
