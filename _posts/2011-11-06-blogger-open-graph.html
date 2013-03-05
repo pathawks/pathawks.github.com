@@ -8,21 +8,24 @@ layout: post
 <p>Simply copy the code below and paste it into your template after the <code>&lt;header&gt;</code> tag.</p>
 <script src='https://gist.github.com/1343315.js?file=og.html'>
 </script>
-<noscript>
-<link rel="stylesheet" href="https://gist.github.com/stylesheets/gist/embed.css" />
-<div id="gist-1343315" class="gist">
-<div class="gist-file">
-<div class="gist-data gist-syntax">
-<div class="gist-highlight"><pre><div class="line" id="LC1"><span class="c">&lt;!-- Begin Open Graph metadata --&gt;</span></div><div class="line" id="LC2"><span class="nt">&lt;b:if</span> <span class="na">cond=</span><span class="s">'data:blog.pageType == &amp;quot;item&amp;quot;'</span><span class="nt">&gt;</span></div><div class="line" id="LC3">	<span class="nt">&lt;meta</span> <span class="na">content=</span><span class="s">'article'</span> <span class="na">property=</span><span class="s">'og:type'</span><span class="nt">/&gt;</span></div><div class="line" id="LC4">	<span class="nt">&lt;meta</span> <span class="na">expr:content=</span><span class="s">'data:blog.title'</span> <span class="na">property=</span><span class="s">'og:site_name'</span><span class="nt">/&gt;</span></div><div class="line" id="LC5">	<span class="nt">&lt;meta</span> <span class="na">expr:content=</span><span class="s">'data:blog.pageName'</span> <span class="na">property=</span><span class="s">'og:title'</span><span class="nt">/&gt;</span></div><div class="line" id="LC6">	<span class="nt">&lt;b:if</span> <span class="na">cond=</span><span class="s">'data:blog.postImageThumbnailUrl'</span><span class="nt">&gt;</span></div><div class="line" id="LC7">		<span class="nt">&lt;meta</span> <span class="na">expr:content=</span><span class="s">'data:blog.postImageThumbnailUrl'</span> <span class="na">property=</span><span class="s">'og:image'</span><span class="nt">/&gt;</span></div><div class="line" id="LC8">	<span class="nt">&lt;/b:if&gt;</span></div><div class="line" id="LC9"><span class="nt">&lt;b:else/&gt;</span></div><div class="line" id="LC10">	<span class="nt">&lt;meta</span> <span class="na">expr:content=</span><span class="s">'data:blog.title'</span> <span class="na">property=</span><span class="s">'og:title'</span><span class="nt">/&gt;</span></div><div class="line" id="LC11">	<span class="nt">&lt;meta</span> <span class="na">content=</span><span class="s">'website'</span> <span class="na">property=</span><span class="s">'og:type'</span><span class="nt">/&gt;</span></div><div class="line" id="LC12"><span class="nt">&lt;/b:if&gt;</span></div><div class="line" id="LC13"><br></div><div class="line" id="LC14"><span class="nt">&lt;meta</span> <span class="na">expr:content=</span><span class="s">'&amp;quot;en_US&amp;quot;'</span> <span class="na">property=</span><span class="s">'og:locale'</span><span class="nt">/&gt;</span></div><div class="line" id="LC15"><span class="nt">&lt;meta</span> <span class="na">expr:content=</span><span class="s">'data:blog.canonicalUrl'</span> <span class="na">property=</span><span class="s">'og:url'</span><span class="nt">/&gt;</span></div><div class="line" id="LC16"><span class="c">&lt;!-- End Open Graph metadata --&gt;</span></div></pre></div>
-</div>
-<div class="gist-meta">
-<a href="https://gist.github.com/raw/1343315/a4a4f696bcfdbb3a16c88abde8a7913db3d33785/og.html" style="float:right;">view raw</a>
-<a href="https://gist.github.com/1343315#file_og.html" style="float:right;margin-right:10px;color:#666">og.html</a>
-<a href="https://gist.github.com/1343315">This Gist</a> brought to you by <a href="http://github.com">GitHub</a>.
-</div>
-</div>
-</div>
-</noscript>
+<noscript>{% highlight html %}
+<!-- Begin Open Graph metadata -->
+<b:if cond='data:blog.pageType == &quot;item&quot;'>
+	<meta content='article' property='og:type'/>
+	<meta expr:content='data:blog.title' property='og:site_name'/>
+	<meta expr:content='data:blog.pageName' property='og:title'/>
+	<b:if cond='data:blog.postImageThumbnailUrl'>
+		<meta expr:content='data:blog.postImageThumbnailUrl' property='og:image'/>
+	</b:if>
+<b:else/>
+	<meta expr:content='data:blog.title' property='og:title'/>
+	<meta content='website' property='og:type'/>
+</b:if>
+ 
+<meta expr:content='&quot;en_US&quot;' property='og:locale'/>
+<meta expr:content='data:blog.canonicalUrl' property='og:url'/>
+<!-- End Open Graph metadata -->
+{% endhighlight %}</noscript>
 <p>I&#8217;ve added this code to <a href='https://gist.github.com/1343315'>a Gist</a>, so feel free to fork it and modify it as you see fit. If you do something really cool, I&#8217;d love to hear about it.</p>
 <p>A couple notes:</p>
 <ul>
