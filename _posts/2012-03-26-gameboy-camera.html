@@ -42,8 +42,10 @@ Plug the GB USB Smart Card into the Mega Memory Card, turn on the Game Boy, and 
 <h2>Step 4: Dump the game save to your computer</h2>
 <p>Disconnect the GB USB Smart Card from the Mega Memory Card and connect it to your computer via USB.</p><p>
 Open the <strong>Terminal</strong> application on your Mac, and use your mad Unix skillz to navigate to the folder where you saved EMS Flasher. If you were lazy, and just extracted it to your default Download folder, you would enter the following command in the terminal.</p>
-<div><pre><code>cd ~/Downloads
-./ems-flasher --read "photos.sav"</code></pre></div>
+{% highlight sh %}
+cd ~/Downloads
+./ems-flasher --read "photos.sav"
+{% endhighlight %}
 <h2>Step 5: Extract the photos from the game save</h2><p>
 There are a couple ways to perform this step. I think the best is to use <strong>GBCamera Dump</strong>, but to use this program on OS X, you will need to use Wine (or <a href="http://wineskin.doh123.com/">Wineskin</a> or <a href="http://winebottler.kronenberg.org/">WineBottler</a>). If this is not an option for whatever reason, you can <a href="http://gieskes.nl/gameboy-camera/sav-converter/">upload the Game Boy Camera save data to this website</a> and it will export the pictures as a GIF.</p><p>
 Anyway, using GBCamera Dump is easy enough. Just run the program, open the Game Boy Camera save file, and extract any/all of the photos you want to save. You can even extract the game face. The photos will be exported to a simple 128×112 4-shade .bmp image file.</p><p>
