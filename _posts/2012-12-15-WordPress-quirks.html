@@ -5,40 +5,40 @@ layout: post
 I am getting really aggravated by WordPress's quirks.
 
 {% highlight php %}
-&lt;?php
+<?php
 /*
- * WHAT DOES THIS CODE DO?
+ * WTF DOES THIS CODE DO?
  *
- * When using get_adjacent_post(), there is no way to restrict posts to one or two
- * categories, if the categories in question are not identical to the current post.
- * We get arround that by requesting a list of EVERY CATEGORY EXCEPT the one in
- * question, and then pass that as our list of 'excluded' categories.
+ * When using get_adjacent_post(), there is no way to restrict posts to one or two categories,
+ * if the categories in question are not identical to the current post. We get arround that by
+ * having requesting a list of EVERY CATEGORY EXCEPT the one in question, and then pass that
+ * as our list of 'excluded' categories.
  *
  * Take a deep breath.
- * Yes, it's stupid, but it works.
+ *
+ * Yes, it's freaking stupid, but it works.
  *
  */
 $post_categories = get_categories( array(
-    'exclude' =&gt; array( 1, 6 ), // Page and chapter categories
-    'orderby' =&gt; 'id',
+    'exclude' => array( 1, 6 ), // Page and chapter categories
+	'orderby' => 'id',
 ) );
 $post_categories = wp_list_pluck( $post_categories, 'cat_ID' );
- 
+
 $prev_post   = get_previous_post( FALSE, $post_categories );
 $next_post   =     get_next_post( FALSE, $post_categories );
- 
+
 /*
  * For reasons that are not obvious to me,
  * while `get_previous_post` and `get_next_post` return a single
  * $post object ready to rock, `get_boundary_post` returns an
  * ARRAY with a single WordPress post. So that we can use them in
  * similar ways, we have to extract the $post from the returned ARRAY.
- *
  * http://core.trac.wordpress.org/ticket/22950
  */
 $first_post  = array_shift( get_boundary_post( FALSE, $page_categories, TRUE ) );
 $latest_post = array_shift( get_boundary_post( FALSE, $page_categories, FALSE ) );
- 
+
 if ( ! is_single() || is_attachment() ) {
 /*
  * We'll have to impliment our own workaround for WordPress's broken behavior
@@ -49,8 +49,8 @@ if ( ! is_single() || is_attachment() ) {
  *
  * http://core.trac.wordpress.org/ticket/22957
  */
-    $first_post  = array_shift( get_posts( array('numberposts' =&gt; 1, 'category__not_in' =&gt; $page_categories, 'order' =&gt; 'ASC',  'update_post_term_cache' =&gt; false, 'update_post_meta_cache' =&gt; false) ) );
-    $latest_post = array_shift( get_posts( array('numberposts' =&gt; 1, 'category__not_in' =&gt; $page_categories, 'order' =&gt; 'DESC', 'update_post_term_cache' =&gt; false, 'update_post_meta_cache' =&gt; false) ) );
+	$first_post  = array_shift( get_posts( array('numberposts' => 1, 'category__not_in' => $page_categories, 'order' => 'ASC',  'update_post_term_cache' => false, 'update_post_meta_cache' => false) ) );
+	$latest_post = array_shift( get_posts( array('numberposts' => 1, 'category__not_in' => $page_categories, 'order' => 'DESC', 'update_post_term_cache' => false, 'update_post_meta_cache' => false) ) );
 }
 {% endhighlight %}
 
