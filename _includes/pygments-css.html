@@ -1,5 +1,4 @@
 {% assign highlight='class="highlight"' %}
-{% unless size:content|split:highlight == 1 %}
+{% if content contains highlight %}
 <link rel="stylesheet" href="/stylesheets/pygments.css" type="text/css" media="screen"/>
-<meta name="debug" content="{{content contains highlight}}" />
-{% endunless %}
+{% endif %}
