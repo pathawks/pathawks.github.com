@@ -11,7 +11,7 @@ But we're getting off track.
 
 So one such "screen saver" that I wrote in **[ASIC](http://asic.pathawks.com/)** (Almost BASIC), would paint the screen with overlapping colored boxes. I need to put "screen saver" in quotes because the program never cleared the screen and never painted a black or grey pixel, so I doubt very much that it would do anything to prevent [burn in](http://en.wikipedia.org/wiki/Screen_burn-in).
 
-Anyway, I recently found the code to this program (thanks, Dad, for holding onto it for so many years.) and, running it inside of [**DOSBox**](http://www.dosbox.com/), I have discovered something quite odd.  
+Anyway, I recently found the code to this program (thanks, Dad, for holding onto it for so many years) and, running it inside of [**DOSBox**](http://www.dosbox.com/), I have discovered something quite odd.  
 Not only does the program output the same pattern every time it's run, but after a short amount of time, it falls into a loop.  
 The loop seems to repeat about every 13 seconds.
 
