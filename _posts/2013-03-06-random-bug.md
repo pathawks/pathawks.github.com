@@ -81,4 +81,4 @@ Any advice on how to diagnose this problem would be much appreciated.
         
         RETURN
 
-The first thing I noticed about this (aside from the lack of BASIC syntax highlighting in any modern editor) is just how inefficient I was being with random numbers. The **ASIC** (**RND** command)[http://asic.pathawks.com/reference/rnd] returns a number between 0 and 32767 ( $$ 2^{15}-1 $$ ).
+The first thing I noticed about this (aside from the lack of BASIC syntax highlighting in any modern editor) is just how inefficient I was being with random numbers. The **ASIC** (**RND** command)[http://asic.pathawks.com/reference/rnd] returns a number between 0 and 32767 ( $2^{15}-1$ ).
