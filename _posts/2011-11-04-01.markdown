@@ -1,6 +1,7 @@
 ---
-title: Hello World
+hide: True
 layout: post
+title: Hello World
 ---
 
 I'm trying to figure out how to get a blog going on GitHub.
