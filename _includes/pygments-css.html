@@ -1,9 +1,9 @@
 {% assign highlight='class="highlight"' %}
-{% for item in content | split:highlight %}
-{% if forloop.index0 == 0 %}
+{% for item in content|split:highlight %}
+{% if item.index0 == 0 %}
 <meta name="DEBUG" />
 {% endif %}
-{% if forloop.index0 == 1 %}
+{% if item.index0 == 1 %}
 <link rel="stylesheet" href="/stylesheets/pygments.css" type="text/css" media="screen"/>
 {% endif %}
 {% endfor %}
