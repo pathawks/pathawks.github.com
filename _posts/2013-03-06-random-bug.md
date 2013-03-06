@@ -94,7 +94,7 @@ We can avoid these problems (and make the program really sing) with just a few c
         SCREEN 9
         
         RESTART:
-        FOR L = 0 TO 100
+        FOR L = 0 TO 1000
         X = RND(0)
         X = X MOD 320
         
