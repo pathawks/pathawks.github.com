@@ -9,12 +9,13 @@ When I was in middle school, I very much enjoyed writing "screen savers" for my 
 
 But we're getting off track.
 
-So one such "screen saver" that I wrote in *[ASIC](http://asic.pathawks.com/)* (Almost BASIC), would paint the screen with overlapping colored boxes. I need to put "screen saver" in quotes because the program never cleared the screen and never painted a black or grey pixel, so I doubt very much that it would do anything to prevent (burn in)[http://en.wikipedia.org/wiki/Screen_burn-in].
+So one such "screen saver" that I wrote in **[ASIC](http://asic.pathawks.com/)** (Almost BASIC), would paint the screen with overlapping colored boxes. I need to put "screen saver" in quotes because the program never cleared the screen and never painted a black or grey pixel, so I doubt very much that it would do anything to prevent (burn in)[http://en.wikipedia.org/wiki/Screen_burn-in].
 Anyway, I recently found the code to this program (Thanks Dad for holding onto it for so many years.) and, running it inside of DOSBox, I have discovered something quite odd. After a short amount of time, it falls into a loop.
 
-<iframe width="900" height="675" src="http://www.youtube-nocookie.com/embed/RucsIOZPpvI?rel=0" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+<iframe width="900" height="675" src="http://www.youtube-nocookie.com/embed/RucsIOZPpvI?rel=0" frameborder="0" allowfullscreen="allowfullscreen">
+</iframe>
 
-I'm not sure if this is a problem with my program itself, with the *ASIC* compiler, or with DOSBox.
+I'm not sure if this is a problem with my program itself, with the **ASIC** compiler, or with DOSBox.
 Any advice on how to diagnose this problem would be much appreciated.
 
         CLS
