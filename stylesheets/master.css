@@ -88,7 +88,8 @@ div.highlight, pre code {
 }
 div.highlight pre code,.gist pre code {margin: 0}
 
-div.highlight {padding:0.2em}
+div.highlight          {padding: 0.2em 0}
+div.highlight pre code {padding: 0 0.2em}
 
 code,.gist .gist-file,.gist .gist-file .gist-data .line-pre {
 	font-family: 'Source Code Pro', Menlo, monospace;
