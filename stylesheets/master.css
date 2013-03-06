@@ -158,4 +158,7 @@ html.emoji .emoji {font-family:'Apple Color Emoji';display:inline-block;text-ind
 		text-align:center;
 		width:auto;
 	}
+	div.highlight, pre code {
+		margin:0;
+	}
 }
