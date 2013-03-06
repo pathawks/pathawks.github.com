@@ -86,9 +86,10 @@ pre code {
 	display:block;
 	margin: 0 0 0 3em;
 }
-code,.gist .gist-file, .gist .gist-file .gist-data pre {
-	font-family: 'Source Code Pro', Menlo, monospace!important;
+code,.gist .gist-file,.gist .gist-file .gist-data .line-pre {
+	font-family: 'Source Code Pro', Menlo, monospace;
 }
+.gist .gist-file .gist-meta {font-family: 'Sorts Mill Goudy', serif}
 
 blockquote {
 	border-left: 2px solid #999;
