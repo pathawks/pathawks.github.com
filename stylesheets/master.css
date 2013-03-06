@@ -1,9 +1,7 @@
-@import url('//fonts.googleapis.com/css?family=Sorts+Mill+Goudy:400,400italic|Source+Code+Pro:400,700|Play:400');
-
 html,body {
 	background:#eee;
 	color:#424242;
-	font-family: 'Sorts Mill Goudy', serif;
+	font-family: 'Source Sans Pro', serif;
 	margin:0;
 	padding:0;
 	text-rendering: optimizeLegibility;
@@ -100,7 +98,7 @@ div.highlight pre code {padding: 0 0.5em;font-size: 11pt}
 code,.gist .gist-file,.gist .gist-file .gist-data .line-pre {
 	font-family: 'Source Code Pro', Menlo, monospace;
 }
-.gist .gist-file .gist-meta {font-family: 'Sorts Mill Goudy', serif}
+.gist .gist-file .gist-meta {font-family: 'Source Sans Pro', serif}
 
 blockquote {
 	border-left: 2px solid #999;
