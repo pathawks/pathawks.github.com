@@ -12,18 +12,17 @@ But we're getting off track.
 
 So one such "screen saver" that I wrote in **[ASIC](http://asic.pathawks.com/)** (Almost BASIC), would paint the screen with overlapping colored boxes. I need to put "screen saver" in quotes because the program never cleared the screen and never painted a black or grey pixel, so I doubt very much that it would do anything to prevent [burn in](http://en.wikipedia.org/wiki/Screen_burn-in).
 
-Anyway, I recently found the code to this program (Thanks Dad for holding onto it for so many years.) and, running it inside of DOSBox, I have discovered something quite odd.
-Not only does the program output the same pattern every time it's run, but after a short amount of time, it falls into a loop.
+Anyway, I recently found the code to this program (Thanks Dad for holding onto it for so many years.) and, running it inside of DOSBox, I have discovered something quite odd.  
+Not only does the program output the same pattern every time it's run, but after a short amount of time, it falls into a loop.  
 The loop seems to repeat about every 13 seconds.
 
 Notice the box towards the top right of the screen that goes from purple to green to purple to green....
-
 
 <iframe width="640" height="480" src="http://www.youtube-nocookie.com/embed/RucsIOZPpvI?rel=0" frameborder="0" allowfullscreen="allowfullscreen" style="margin:1em auto;">
 </iframe>
 
 
-I'm not sure if this is a problem with my program itself, with the **ASIC** compiler, or with DOSBox.
+I'm not sure if this is a problem with my program itself, with the **ASIC** compiler, or with DOSBox.  
 Any advice on how to diagnose this problem would be much appreciated.
 
 
