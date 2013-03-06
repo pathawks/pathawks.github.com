@@ -87,11 +87,14 @@ div.highlight, pre code {
 	display:block;
 	margin: 0 0 0 1em;
 	border: 1px solid #dedede;
-	overflow-x:scroll;-webkit-overflow-scrolling:touch;
+	overflow-x:scroll;
+	-webkit-overflow-scrolling:touch;
 }
-div.highlight pre code,.gist pre code {margin: 0;border:0;overflow-x:visible}
+pre code {background:#fff}
 
-div.highlight {padding: 0.1em 0;overflow-x:scroll;-webkit-overflow-scrolling:touch;border: 1px solid #dedede}
+div.highlight pre code,.gist pre code {margin: 0;border:0;overflow-x:visible;background:transparent}
+
+div.highlight {padding: 0.1em 0}
 div.highlight pre code {padding: 0 0.5em;font-size: 11pt}
 
 code,.gist .gist-file,.gist .gist-file .gist-data .line-pre {
