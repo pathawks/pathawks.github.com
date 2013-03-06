@@ -15,7 +15,7 @@ Anyway, I recently found the code to this program (Thanks Dad for holding onto i
 Notice the box twoards the top right of the screen that goes from purple to green to purple to green....
 
 
-<iframe width="900" height="675" src="http://www.youtube-nocookie.com/embed/RucsIOZPpvI?rel=0" frameborder="0" allowfullscreen="allowfullscreen">
+<iframe width="640" height="480" src="http://www.youtube-nocookie.com/embed/RucsIOZPpvI?rel=0" frameborder="0" allowfullscreen="allowfullscreen" style="margin:1em auto;">
 </iframe>
 
 
