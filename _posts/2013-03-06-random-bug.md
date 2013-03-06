@@ -124,3 +124,5 @@ We can avoid these problems (and make the program really sing) with just a few c
         SCREEN 0
         END
         
+<iframe width="640" height="480" src="http://www.youtube-nocookie.com/embed/trVBm6geLYE?rel=0" frameborder="0" allowfullscreen="allowfullscreen" style="margin:1em auto;">
+</iframe>
