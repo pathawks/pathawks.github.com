@@ -7,21 +7,20 @@ I am getting really aggravated by WordPress's quirks.
 {% highlight php %}
 <?php
 /*
- * WTF DOES THIS CODE DO?
+ * WHAT DOES THIS CODE DO?
  *
- * When using get_adjacent_post(), there is no way to restrict posts to one or two categories,
- * if the categories in question are not identical to the current post. We get arround that by
- * having requesting a list of EVERY CATEGORY EXCEPT the one in question, and then pass that
- * as our list of 'excluded' categories.
+ * When using get_adjacent_post(), there is no way to restrict posts to one or two
+ * categories, if the categories in question are not identical to the current post.
+ * We get arround that by requesting a list of EVERY CATEGORY EXCEPT the one in
+ * question, and then pass that as our list of 'excluded' categories.
  *
  * Take a deep breath.
- *
- * Yes, it's freaking stupid, but it works.
+ * Yes, it's stupid, but it works.
  *
  */
 $post_categories = get_categories( array(
     'exclude' => array( 1, 6 ), // Page and chapter categories
-	'orderby' => 'id',
+    'orderby' => 'id',
 ) );
 $post_categories = wp_list_pluck( $post_categories, 'cat_ID' );
 
@@ -34,6 +33,7 @@ $next_post   =     get_next_post( FALSE, $post_categories );
  * $post object ready to rock, `get_boundary_post` returns an
  * ARRAY with a single WordPress post. So that we can use them in
  * similar ways, we have to extract the $post from the returned ARRAY.
+ *
  * http://core.trac.wordpress.org/ticket/22950
  */
 $first_post  = array_shift( get_boundary_post( FALSE, $page_categories, TRUE ) );
@@ -49,8 +49,8 @@ if ( ! is_single() || is_attachment() ) {
  *
  * http://core.trac.wordpress.org/ticket/22957
  */
-	$first_post  = array_shift( get_posts( array('numberposts' => 1, 'category__not_in' => $page_categories, 'order' => 'ASC',  'update_post_term_cache' => false, 'update_post_meta_cache' => false) ) );
-	$latest_post = array_shift( get_posts( array('numberposts' => 1, 'category__not_in' => $page_categories, 'order' => 'DESC', 'update_post_term_cache' => false, 'update_post_meta_cache' => false) ) );
+    $first_post  = array_shift( get_posts( array('numberposts' => 1, 'category__not_in' => $page_categories, 'order' => 'ASC',  'update_post_term_cache' => false, 'update_post_meta_cache' => false) ) );
+    $latest_post = array_shift( get_posts( array('numberposts' => 1, 'category__not_in' => $page_categories, 'order' => 'DESC', 'update_post_term_cache' => false, 'update_post_meta_cache' => false) ) );
 }
 {% endhighlight %}
 
