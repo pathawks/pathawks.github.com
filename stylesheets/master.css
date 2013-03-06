@@ -82,11 +82,11 @@ p {
 .author {
 	display:none;
 }
-.highlight, pre code {
+div.highlight, pre code {
 	display:block;
 	margin: 0 0 0 3em;
 }
-.highlight pre code {margin: 0}
+.highlight pre code,.gist pre code {margin: 0}
 
 code,.gist .gist-file,.gist .gist-file .gist-data .line-pre {
 	font-family: 'Source Code Pro', Menlo, monospace;
