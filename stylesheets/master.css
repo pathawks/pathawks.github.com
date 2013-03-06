@@ -67,9 +67,10 @@ p {
 	padding:0;
 	line-height:1.6em;
 }
-.postlist .postdate,.date {
+.postlist .postdate,header .date {
 	font-size:0.7em;
 	color:#999;
+	white-space:nowrap;
 }
 .date {
 	position:absolute;
