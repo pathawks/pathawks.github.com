@@ -2,6 +2,7 @@
 title: Random Bug
 layout: post
 hide: True
+math: True
 ---
 I seem to have stumbled accross a very strange bug.
 
