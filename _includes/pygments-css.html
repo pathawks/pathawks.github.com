@@ -1,4 +1,5 @@
 {% assign highlight='class="highlight"' %}
 {% unless size:content|split:highlight == 1 %}
 <link rel="stylesheet" href="/stylesheets/pygments.css" type="text/css" media="screen"/>
+<meta name="debug" content="{{size:content|split:highlight}}" />
 {% endunless %}
