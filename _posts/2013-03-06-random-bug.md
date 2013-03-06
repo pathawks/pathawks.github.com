@@ -12,7 +12,7 @@ But we're getting off track.
 
 So one such "screen saver" that I wrote in **[ASIC](http://asic.pathawks.com/)** (Almost BASIC), would paint the screen with overlapping colored boxes. I need to put "screen saver" in quotes because the program never cleared the screen and never painted a black or grey pixel, so I doubt very much that it would do anything to prevent [burn in](http://en.wikipedia.org/wiki/Screen_burn-in).
 
-Anyway, I recently found the code to this program (Thanks Dad for holding onto it for so many years.) and, running it inside of DOSBox, I have discovered something quite odd.  
+Anyway, I recently found the code to this program (Thanks Dad for holding onto it for so many years.) and, running it inside of [**DOSBox**](http://www.dosbox.com/), I have discovered something quite odd.  
 Not only does the program output the same pattern every time it's run, but after a short amount of time, it falls into a loop.  
 The loop seems to repeat about every 13 seconds.
 
@@ -22,7 +22,7 @@ Notice the box towards the top right of the screen that goes from purple to gree
 </iframe>
 
 
-I'm not sure if this is a problem with my program itself, with the **ASIC** compiler, or with DOSBox.  
+I'm not sure if this is a problem with my program itself, with the **ASIC** compiler, or with **DOSBox**.  
 Any advice on how to diagnose this problem would be much appreciated.
 
 
@@ -85,3 +85,5 @@ Any advice on how to diagnose this problem would be much appreciated.
         RETURN
 
 The first thing I noticed about this (aside from the lack of BASIC syntax highlighting in any modern editor) is just how inefficient I was being with random numbers. The **ASIC** [**RND** command](http://asic.pathawks.com/reference/rnd) returns a number between 0 and 32767 ($2^{15}-1$). A thinking person would divide this number by the limit of the desired range and use the remainder. I simply discarded 99% of the generated numbers and told the computer to try again. This could result in simply exhausting the supply of random numbers. Right now, this is my best guess about what's happening.
+
+I cannot be sure if this is just a **DOSBox** thing or an **ASIC** thing.
