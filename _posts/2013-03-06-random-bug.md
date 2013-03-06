@@ -1,6 +1,5 @@
 ---
 layout: post
-math: True
 title: Random Bug
 ---
 I seem to have stumbled accross a very strange bug.
@@ -83,6 +82,6 @@ Any advice on how to diagnose this problem would be much appreciated.
         
         RETURN
 
-The first thing I noticed about this (aside from the lack of BASIC syntax highlighting in any modern editor) is just how inefficient I was being with random numbers. The **ASIC** [**RND** command](http://asic.pathawks.com/reference/rnd) returns a number between 0 and 32767 ($2^{15}-1$). A thinking person would divide this number by the limit of the desired range and use the remainder. I simply discarded 99% of the generated numbers and told the computer to try again. This could result in simply exhausting the supply of random numbers. Right now, this is my best guess about what's happening.
+The first thing I noticed about this (aside from the lack of BASIC syntax highlighting in any modern editor) is just how inefficient I was being with random numbers. The **ASIC** [**RND** command](http://asic.pathawks.com/reference/rnd) returns a number between 0 and 32767 (2<sup>15</sup>-1). A thinking person would divide this number by the limit of the desired range and use the remainder. I simply discarded 99% of the generated numbers and told the computer to try again. This could result in simply exhausting the supply of random numbers. Right now, this is my best guess about what's happening.
 
 I cannot be sure if this is just a **DOSBox** thing or an **ASIC** thing.
