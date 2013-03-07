@@ -23,64 +23,65 @@ Notice the box towards the top right of the screen that goes from purple to gree
 I'm not sure if this is a problem with my program itself, with the **ASIC** compiler, or with **DOSBox**.  
 Any advice on how to diagnose this problem would be much appreciated.
 
+{% highlight text %}
+CLS
+RANDOMIZE
+SCREEN 9
 
-        CLS
-        RANDOMIZE
-        SCREEN 9
-        
-        RESTART:
-        GOSUB BIGI:
-        REDOX:
-        X = RND(0)
-        IF X > 320 THEN REDOX:
-        
-        REDOY:
-        Y = RND(0)
-        IF Y > 620 THEN REDOY:
-        
-        RECOL:
-        COL = RND(0)
-        IF COL > 15 THEN RECOL:
-        IF COL = 0 THEN RECOL:
-        IF COL = 8 THEN RECOL:
-        
-        Z = Y
-        FOR N = 1 TO 23
-        FOR E = 1 TO 23
-        PSET (X, Z), COL
-        Z = Z + 2
-        NEXT E
-        Z = Y
-        X = X + 2
-        NEXT N
-        
-        G$ = INKEY$
-        IF G$ = "" THEN RESTART:
-        SCREEN 0
-        END
-        
-        
-        BIGI:
-        FOR A = 283 TO 335
-        PSET (A, 628), 7
-        PSET (A, 578), 15
-        NEXT A
-        
-        FOR B = 578 TO 628
-        PSET (283, B), 7
-        PSET (335, B), 15
-        NEXT B
-        
-        FOR C = 295 TO 322
-        PSET (C, 603), 15
-        NEXT C
-        
-        FOR D = 588 TO 618
-        PSET (295, D), 7
-        PSET (322, D), 15
-        NEXT D
-        
-        RETURN
+RESTART:
+GOSUB BIGI:
+REDOX:
+X = RND(0)
+IF X > 320 THEN REDOX:
+
+REDOY:
+Y = RND(0)
+IF Y > 620 THEN REDOY:
+
+RECOL:
+COL = RND(0)
+IF COL > 15 THEN RECOL:
+IF COL = 0 THEN RECOL:
+IF COL = 8 THEN RECOL:
+
+Z = Y
+FOR N = 1 TO 23
+FOR E = 1 TO 23
+PSET (X, Z), COL
+Z = Z + 2
+NEXT E
+Z = Y
+X = X + 2
+NEXT N
+
+G$ = INKEY$
+IF G$ = "" THEN RESTART:
+SCREEN 0
+END
+
+
+BIGI:
+FOR A = 283 TO 335
+PSET (A, 628), 7
+PSET (A, 578), 15
+NEXT A
+
+FOR B = 578 TO 628
+PSET (283, B), 7
+PSET (335, B), 15
+NEXT B
+
+FOR C = 295 TO 322
+PSET (C, 603), 15
+NEXT C
+
+FOR D = 588 TO 618
+PSET (295, D), 7
+PSET (322, D), 15
+NEXT D
+
+RETURN
+{% endhighlight %}
 
 The first thing I noticed about this (aside from the lack of BASIC syntax highlighting in any modern editor) is just how inefficient I was being with random numbers. The **ASIC** [**RND** command](http://asic.pathawks.com/reference/rnd) returns a number between 0 and 32767 (2<sup>15</sup>-1). A thinking person would divide this number by the limit of the desired range and use the remainder. I simply discarded 99% of the generated numbers and told the computer to try again. This could result in simply exhausting the supply of random numbers. Right now, this is my best guess about what's happening.
 
