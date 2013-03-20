@@ -1,6 +1,6 @@
 {% capture license %}
 
-{% if site.license contains '//creativecommons.org/licenses/' %}
+{% if site.license contains '//creativecommons.org/' %}
 <a href="{{ site.license }}">
   {% if site.license contains '/3.0/' %}
      {% if site.license contains '/by/' %}
@@ -21,6 +21,12 @@
      {% if site.license contains '/by-nc-sa/' %}
        <img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" width="88" height="31" />
      {% endif %}
+  {% endif %}
+  {% if site.license contains '/publicdomain/zero/' %}
+    <img alt="CC0" style="border-style: none;" src="http://i.creativecommons.org/p/zero/1.0/88x31.png" width="88" height="31" />
+  {% endif %}
+  {% if site.license contains '/publicdomain/mark/' %}
+    <img alt="Public Domain Mark" style="border-style: none;" src="http://i.creativecommons.org/p/mark/1.0/88x31.png" width="88" height="31" />
   {% endif %}
 </a>
 {% endif %}
