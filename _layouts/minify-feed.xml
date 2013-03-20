@@ -1,4 +1,4 @@
 ---
 layout: minify
 ---
-{% capture content %}{{ content | replace:'>\n','>' }}{% endcapture %}{% capture content %}{{ content | replace:'\n<','<' }}{% endcapture %}{{ content }}
+{% capture content %}{{ content | replace:">\n",">" }}{% endcapture %}{% capture content %}{{ content | replace:"\n<","<" }}{% endcapture %}{{ content }}
