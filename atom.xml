@@ -21,7 +21,7 @@ layout: minify
    <email>{{ site.email }}</email>
  </author>
  {% for post in site.posts limit:5 %}
-	 {% unless post.hide %}{% unless post.layout == 'page' %}{% if post.published %}
+	 {% unless post.hide %}{% unless post.layout == 'page' %}
 		 <entry>
 		   <title>{{ post.title }}</title>
 		   <link href="{{ siteURL }}{{ post.url }}"/>
@@ -29,6 +29,6 @@ layout: minify
 		   <id>{{ siteURL }}{{ post.id }}</id>
 		   <content type="html">{{ post.content | xml_escape }}</content>
 		 </entry>
-	 {% endif %}{% endunless %}{% endunless %}
+	 {% endunless %}{% endunless %}
  {% endfor %}
 </feed>
