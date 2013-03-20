@@ -1,9 +1,9 @@
 {% capture navbar %}
 
 <a href="{{ site.root }}" class="mobile home">Archive</a>
-<a href="{% post_url ../_posts/2011-11-04-projects.html %}" class="mobile">Projects</a>
-<a href="{% post_url 2011-11-04-colophon.html %}" class="mobile">Colophon</a>
-<a href="{% post_url 2000-01-01-contact.html %}" class="mobile">Contact</a>
+<a href="{{ site.root }}projects.html">Projects</a>
+<a href="{{ site.root }}colophon.html">Colophon</a>
+<a href="{{ site.root }}contact.html">Contact</a>
 {% if site.subscribe_rss %}
 	<a href="{{ site.subscribe_rss }}" class="mobile">RSS Feed</a>
 {% else %}
