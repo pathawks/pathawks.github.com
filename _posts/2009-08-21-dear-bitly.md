@@ -1,6 +1,5 @@
 ---
 title: Dear Bit.ly
-layout: post
 ---
 Dear Bit.ly,
 
