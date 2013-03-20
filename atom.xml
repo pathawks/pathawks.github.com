@@ -3,21 +3,29 @@ layout: nil
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-{% if site.url %}
-{% assign siteURL = site.url %}
-{% else %}
-{% assign siteURL = site.root %}
-{% endif %}
- <title>{{ site.title }}</title>
+
+ {% if site.url %}
+   {% assign siteURL = site.url %}
+ {% else %}
+   {% assign siteURL = site.root %}
+ {% endif %}
+
+<title>{{ site.title }}</title>
  <link href="{{ siteURL }}/atom.xml" rel="self"/>
  <link href="{{ siteURL }}/"/>
+
+ {% if site.license %}
+   <link href="{{ site.license }}"  rel="license" type="text/html"/>
+ {% endif %}
+
  <updated>{{ site.time | date_to_xmlschema }}</updated>
  <id>{{ siteURL }}/</id>
  <author>
    <name>{{ site.author }}</name>
    <email>{{ site.email }}</email>
- </author> 
- {% for post in site.posts %}
+ </author>
+
+ {% for post in site.posts limit:5 %}
 	 {% unless post.hide %}
 		 <entry>
 		   <title>{{ post.title }}</title>
