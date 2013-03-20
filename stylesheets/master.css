@@ -130,7 +130,7 @@ blockquote {
 	text-indent:0;
 }
 
-.twitter-tweet-rendered {margin-left:auto;margin-right:auto}
+.twitter-tweet-rendered {margin-left:auto;margin-right:auto;min-width:100%!important}
 
 html .emoji {display:none}
 html.emoji .emoji {font-family:'Apple Color Emoji';display:inline-block;text-indent:.3em}
