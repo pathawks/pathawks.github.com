@@ -1,6 +1,6 @@
 ---
-layout:post
-title:Being Social
+layout: post
+title: Being Social
 ---
 Just finished watching Zuck's keynote at Facebook's f8 Developer Confrence    
 What is striking to me is how much emphasis was put on things that are popular.
