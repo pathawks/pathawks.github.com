@@ -6,4 +6,4 @@ Beginning in a few weeks when Facebook's new (even newer) interface rolls out, F
 Don't get me wrong, the technology they're using to put this stuff together is really amazing, but I have to wonder if they're putting too much emphasis on popularity.
 If the best man at my wedding starts listening a lot to a new band, that's much more interesting to me than what a mob of people I haven't talked to in years is listening to.
 I will have to think on this a bit more, and I don't want to just jump on the "Bash on Facebook" bandwagon, but this all does make me question the relevance of Facebook's newsfeed.
-(It's not "News," Facebook. It's life. They're not your friends. They're mine.)[http://news.cnet.com/8301-31322_3-20109699-256/facebook-netflix-and-the-art-of-blowing-the-lead/]
+[It's not "News," Facebook. It's life. They're not your friends. They're mine.](http://news.cnet.com/8301-31322_3-20109699-256/facebook-netflix-and-the-art-of-blowing-the-lead/)
