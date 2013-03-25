@@ -32,8 +32,8 @@ copyright: http://creativecommons.org/licenses/by/3.0/deed.en_US
 # If publishing to a subdirectory as in http://site.com/project set 'root: /project'
 root: /
 permalink: none
-auto: true
-server: true
+auto: false
+server: false
 # source: source
 # destination: public
 # plugins: plugins
