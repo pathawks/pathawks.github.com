@@ -106,6 +106,10 @@ blockquote {
 	margin-left: 2em;
 }
 
+.footnotes p {
+	display:inline;
+}
+
 #footer {
 	position:fixed;
 	bottom:10px;
