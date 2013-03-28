@@ -1,13 +1,18 @@
 ---
 layout: master
 ---
+{% if page.author.name != site.author %}
+	{% assign guestauthor = ' guestauthor' %}
+{% else %}
+	{% assign guestauthor = '' %}
+{% endif %}
 		<article class='hentry'>
-			<header>
+			<header class='articleheader'>
 				<h2 class='entry-title'>{{page.title}}</h2>
+				{% include author_link.html %}
 				<a href='{{page.url}}' class='bookmark' title='Permalink'>
-					<data value='{{page.date | date_to_xmlschema}}' class='date instapaper_date updated'>{{ page.date | date_to_string }}</data>
+					<data value='{{page.date | date_to_xmlschema}}' class='date instapaper_date updated{{ guestauthor }}'>{{ page.date | date_to_string }}</data>
 				</a>
-				{% if site.googleplus_user %}<a href='https://plus.google.com/{{ site.googleplus_user }}?rel=author' class='author' rel='author'>{{ site.author }}</a>{% endif %}
 			</header>
 			<div class='entry-content'>
 				{{ content }}
