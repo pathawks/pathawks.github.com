@@ -1,6 +1,6 @@
 ---
-layout: post
-title: Dear Bit.ly
+layout: post  
+title: Dear Bit.ly  
 ---
 Dear Bit.ly,
 
