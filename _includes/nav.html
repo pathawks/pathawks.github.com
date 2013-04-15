@@ -7,9 +7,9 @@
 {% endif %}{% endfor %}
 
 {% if site.subscribe_rss %}
-	<a href="{{ site.subscribe_rss }}" class="mobile">RSS Feed</a>
+	<a href="{{ site.subscribe_rss }}" class="mobile">Feed</a>
 {% else %}
-	<a href="{{ site.root }}atom.xml" class="mobile">RSS Feed</a>
+	<a href="{{ site.root }}atom.xml" class="mobile">Feed</a>
 {% endif %}
 
 {% endcapture %}{% capture homeURL %}{{site.root}}index.html{% endcapture %}{% if page.url != homeURL %}{% capture navbar %}{{ navbar | remove:' class="mobile"' }}{% endcapture %}{% endif %}{{ navbar | strip_newlines }}
