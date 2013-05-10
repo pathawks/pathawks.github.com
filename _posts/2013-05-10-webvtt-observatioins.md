@@ -23,6 +23,8 @@ Additionally, it would be nice to have support for a GUID, or even an alternativ
 
 It would be nice to have a semantic way to markup sounds, or even who is speaking. Currently, we can use [voice tags](http://dev.w3.org/html5/webvtt/#dfn-webvtt-cue-voice-span), but that only seems to get us part of the way there. Note: I'm thinking about this mostly from a "Search Engines Indexing Captions" perspective.
 
+On that note, when will we be able to include WebVTT files in Video Sitemaps?
+
 Why doesn't the HTML `<track>` element support the `type` attribute, like the `<source>` element? What happens when we discover the thing that is way better than WebVTT? This seems like a step in the wrong direction.
 
 WebVTT files **must** be UTF-8. The `Content-Type` must be [`text/vtt`](http://dev.w3.org/html5/webvtt/#text-vtt), and specifies no required or optional parameters. Why, then, are so many WebVTT files being served with the Content-Type `text/vtt; charset=utf-8`?
