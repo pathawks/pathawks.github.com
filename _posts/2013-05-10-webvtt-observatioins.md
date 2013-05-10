@@ -14,8 +14,8 @@ According to the [WebVTT Draft Spec](http://dev.w3.org/html5/webvtt/#dfn-webvtt-
 WEBVTT
 Kind: captions
 Language: en
-
-
+  
+  
 {% endhighlight %}
 
 It would be nice if the spec allowed for metadata to be added like this. It would be nice if the spec allowed for something like RDF or microdata, but I understand that one of the beauties of WebVTT is it's low _markup to content_ ratio.
