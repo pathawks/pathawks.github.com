@@ -11,6 +11,6 @@ title: "iDesignTimes"
 
 I neither like you, nor follow you, nor do I appreciate the loud autoplaying video that has nothing to do with the content on the page.
 
-This was my first time visiting your website; I followed [a link from Techmeme.](http://www.techmeme.com/130517/p28#a130517p28).
+This was my first time visiting your website; I followed [a link from Techmeme](http://www.techmeme.com/130517/p28#a130517p28).
 
 I'll not be returning.
