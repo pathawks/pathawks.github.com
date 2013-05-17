@@ -7,7 +7,7 @@ author:
 title: "iDesignTimes"  
 ---
 
-<a href="http://www.flickr.com/photos/pathawks/8748619258/" title="iDesignTimes screenshot"><img src="http://farm9.staticflickr.com/8537/8748619258_084d8e7925_z.jpg" width="640" height="431" alt="iDesignTimes screenshot"></a>
+<a href="http://www.flickr.com/photos/pathawks/8748619258/" title="iDesignTimes screenshot"><img src="http://farm9.staticflickr.com/8537/8748619258_084d8e7925_c.jpg" width="800" height="539" alt="iDesignTimes screenshot"></a>
 
 I neither like you, nor follow you, nor do I appreciate the loud autoplaying video that has nothing to do with the content on the page.
 
