@@ -13,4 +13,8 @@ I neither like you, nor follow you, nor do I appreciate the loud autoplaying vid
 
 This was my first time visiting your website; I followed [a link from Techmeme](http://www.techmeme.com/130517/p28#a130517p28).
 
+If you pause the video, it will automatically resume playing (with sound) after an interval.
+
+While not displayed here, if you scroll down just a bit, there is another Facebook/Twitter banner **in the middle of the story**!
+
 I'll not be returning.
