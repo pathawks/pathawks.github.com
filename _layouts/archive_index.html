@@ -1,0 +1,10 @@
+---
+layout: page
+meta-robots: "noodp, noydir, noindex, noarchive, follow"
+---
+<header>
+	<h1 class="entry-title">{{ page.title }}</h1>
+</header>
+{% for post in page.period_posts %}
+  {% include post-li.html %}
+{% endfor %}

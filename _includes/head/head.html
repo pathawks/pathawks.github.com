@@ -1,0 +1,16 @@
+{% capture header %}
+
+{% include head/charset.html %}
+{% include head/title.html %}
+{% include head/canonical.html %}
+{% include head/nextprev.html %}
+{% include head/metadata.html %}
+{% include head/rss.html %}
+{% include head/stylesheets.html %}
+{% include head/fonts.html %}
+{% include head/viewport.html %}
+{% include head/modernizr.html %}
+{% include head/mathjax.html %}
+{% include head/twitter.html %}
+
+{% endcapture %}{{ header | strip_newlines | replace:'	',' ' | replace:'  ',' ' | replace:'  ',' ' | replace:'  ',' ' | replace:'  ',' ' | replace:'  ',' ' | replace:'  ',' ' | replace:'  ',' ' | replace:'  ',' ' | replace:'  ',' ' | replace:'> <','><' }}

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"{% if site.lang %} lang='{{site.lang}}'{% endif %}>
+<head>{% capture header %}
+{% include head_charset.html %}
+{% include head_title.html %}
+{% include head_canonical.html %}
+{% include head_metadata.html %}
+{% include head_rss.html %}
+{% include viewport.html %}
+<script async="async" src="//platform.twitter.com/widgets.js" charset="utf-8"> </script>
+<link rel="stylesheet" href="/stylesheets/photo-tweet.css" type="text/css" media="screen" />
+<style type="text/css">
+body {background: #000 url('{{ page.flickr.photo.lowres }}') no-repeat center 40%;background-size: cover}
+#image {background: transparent url('{{ page.flickr.photo.original }}') no-repeat center 40%;background-size: cover}
+@media screen and (max-width:1024px){#image{background-image:url('{{ page.flickr.photo.large }}')}}
+</style>
+</head>{% endcapture %}{{ header | strip_newlines }}
+<body itemprop='blogPost' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'><blockquote class="twitter-tweet" data-cards="hidden" width="300"><p>{{ page.twitter.text }}</p><a href="{{ page.twitter.link }}">&nbsp;</a></blockquote>{% include license.html %}<a id='homelink' href='{{ site.url }}'>Home</a><div id='image'>&nbsp;</div><meta content='{{ page.flickr.photo.lowres }}' itemprop='thumbnailUrl'/><meta content='{{ page.flickr.photo.large }}' itemprop='image'/><meta content='{{ page.twitter.link }}' itemprop='isBasedOnUrl'/><meta content='{{ page.flickr.link }}' itemprop='isBasedOnUrl'/></body></html>

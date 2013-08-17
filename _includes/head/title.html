@@ -1,0 +1,6 @@
+{% if page.title %}
+<title>{{ page.title | textilize | strip_html }} - {{ site.title }}</title>
+{% else %}
+<title>{{ site.title }}</title>
+{% endif %}
+

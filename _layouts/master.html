@@ -1,0 +1,14 @@
+---
+layout: minify
+---
+<!DOCTYPE html>
+<html dir='ltr'{% if site.lang %} lang='{{site.lang}}'{% endif %}>
+<head>{% include head/head.html %}</head>
+{% if page.url == '/index.html' %}<body class='home'>{% else %}<body>{% endif %}
+{{ content }}
+<footer id='footer'>
+{% include license.html %}
+</footer>
+{% include nav.html %}
+</body>
+</html>

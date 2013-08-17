@@ -1,0 +1,19 @@
+{% if author %}
+	{% if author.name %}
+		<dc:creator>{{ author.name }}</dc:creator>
+	{% endif %}
+	<author>
+		{% if author.name %}
+		<name>{{ author.name }}</name>
+		{% endif %}
+		{% if author.email %}
+		<email>{{ author.email | xml_escape }}</email>
+		{% endif %}
+		{% if author.url %}
+		<uri>{{ author.url | XMLURL }}</uri>
+		{% endif %}
+		{% if author.image %}
+		<gd:image rel='http://schemas.google.com/g/2005#thumbnail' width='32' height='32' src='{{ author.image | XMLURL }}'/>
+		{% endif %}
+	</author>
+{% endif %}

@@ -1,0 +1,20 @@
+---
+layout: master
+---
+{% capture articleheader %}
+{% if page.author.name != site.author.name %}
+	{% assign guestauthor = ' guestauthor' %}
+{% else %}
+	{% assign guestauthor = '' %}
+{% endif %}
+<article class='hentry' itemprop='blogPost' itemscope='itemscope' itemtype='http://schema.org/BlogPosting' itemref='license'>
+<header class='articleheader'>
+<h1 class='entry-title' itemprop='name headline'>{{page.title | textilize | strip_html }}</h1>
+{% include author_link.html %}
+<a href='{{page.url}}' itemprop='url' class='bookmark' title='Permalink'>
+<time pubdate='pubdate' datetime='{{page.date | date_to_xmlschema}}' class='date instapaper_date updated{{ guestauthor }}' itemprop='datePublished'>{{ page.date | date_to_string }}</time>
+</a>
+{% if page.thumbnail %}<meta content='{{ page.thumbnail }}' itemprop='thumbnailUrl'/>{% endif %}
+</header>{% endcapture %}{{ articleheader | strip_newlines | replace: '	',' ' |  | replace: '  ',' ' | replace: '  ',' ' | replace: '  ',' ' | replace: '  ',' ' | replace: '  ',' ' | replace: '  ',' ' | replace: '  ',' ' | replace: '  ',' ' | replace: '  ',' ' | replace: '  ',' ' | replace: '  ',' ' | replace: '  ',' ' | replace: '  ',' ' | replace: '  ',' ' | replace:'> <','><' }}
+<div class='entry-content' itemprop='description articleBody'>{% include content.html %}</div>{% include comments.html %}
+</article>

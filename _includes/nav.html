@@ -1,0 +1,19 @@
+{% capture navbar %}
+<nav>
+
+<a id='homelink' href='{{ site.root }}'>{{ site.title }}</a>
+
+<a href='{{ site.root }}' class='mobile home'>Archive</a>
+
+{% for post in site.posts %}{% if post.layout == 'page' %}
+<a href='{{ post.url }}'>{{ post.title }}</a>
+{% endif %}{% endfor %}
+
+{% if site.subscribe_rss %}
+	<a href='{{ site.subscribe_rss }}' class='mobile'>Feed</a>
+{% else %}
+	<a href='{{ site.root }}atom.xml' class='mobile'>Feed</a>
+{% endif %}
+
+</nav>
+{% endcapture %}{% capture homeURL %}{{site.root}}index.html{% endcapture %}{% if page.url != homeURL %}{% capture navbar %}{{ navbar | remove:" class='mobile'" }}{% endcapture %}{% endif %}{{ navbar | strip_newlines }}

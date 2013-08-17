@@ -1,0 +1,30 @@
+{% if page.author.name %}
+	<span itemprop='author' itemscope='itemscope' itemtype='http://schema.org/Person'>
+	{% if page.author.name != site.author.name %}
+		{% assign guestauthor = ' guestauthor' %}
+	{% else %}
+		{% assign guestauthor = '' %}
+	{% endif %}
+	{% if page.author.url %}
+		<a href='{{ page.author.url }}' class='author{{ guestauthor }}' rel='author'>
+		<link itemprop='url' href='{{ page.author.url }}' />
+		{% if site.googleplus_user %}
+			<link itemprop='url' href='https://plus.google.com/{{ site.googleplus_user }}?rel=author' />
+		{% endif %}
+	{% else if site.googleplus_user %}
+		<a href='https://plus.google.com/{{ site.googleplus_user }}?rel=author' class='author{{ guestauthor }}' rel='author'>
+		<link itemprop='url' href='https://plus.google.com/{{ site.googleplus_user }}?rel=author' />
+	{% endif %}
+	{% if page.author.name %}
+		<span itemprop='name'>{{ page.author.name }}</span>
+	{% else if site.author.name %}
+		<span itemprop='name'>{{ site.author.name }}</span>
+	{% endif %}
+	{% if page.author.url or site.googleplus_user %}
+		</a>
+	{% endif %}
+	{% if page.author.image %}
+		<meta content='{{ page.author.image | XMLURL }}' itemprop='image'/>
+	{% endif %}
+	</span>
+{% endif %}

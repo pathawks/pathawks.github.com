@@ -1,0 +1,14 @@
+{% include ogp.html %}
+
+{% if page.date %}
+  <meta name="dc.date.issued" content="{{page.date | date_to_xmlschema}}" />
+{% endif %}
+
+{% if site.license %}
+	<link rel="license" href="{{ site.license }}" />
+{% endif %}
+
+{% if page.location and page.location.latitude and page.location.longitude %}
+	<meta name="geo.position" content="{{ page.location.latitude }};{{ page.location.longitude }}" />
+	<meta name="ICBM" content="{{ page.location.latitude }}, {{ page.location.longitude }}" />
+{% endif %}
