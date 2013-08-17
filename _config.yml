@@ -6,7 +6,15 @@ url: http://alt.pathawks.com
 title: alt.pathawks.com
 # subtitle: A blogging framework for hackers.
 author: Pat Hawks
-# simple_search: http://google.com/search
+author: 
+    name:       "Pat Hawks"
+    url:        "https://plus.google.com/102057071740749981761?rel=author"
+    image:      "http://pathawks.com/images/pat/apple-300.png"
+    email:      "pat@pathawks.com"
+    twitter:    "pathawks"
+    facebook:   "pathawks"
+    github:     "pathawks"
+    googleplus: "102057071740749981761"
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
 # You can customize the format as defined in
@@ -60,6 +68,24 @@ default_asides: [asides/recent_posts.html, asides/github.html, asides/twitter.ht
 # ----------------------- #
 #   3rd Party Settings    #
 # ----------------------- #
+
+# Fonts
+fonts:
+  google:
+    - 
+      name: "Source Sans Pro"
+      styles:
+        - "400"
+        - "700"
+        - "400italic"
+        - "700italic"
+    -
+      name: "Source Code Pro"
+      styles:
+        - "400"
+        - "700"
+    -
+      name: "Play"
 
 # Github repositories
 github_user: pathawks
