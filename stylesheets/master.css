@@ -1,3 +1,6 @@
+---
+layout: minify-css
+---
 html,body {
 	background:#eee;
 	color:#424242;
@@ -5,18 +8,11 @@ html,body {
 	margin:0;
 	padding:0;
 	text-rendering: optimizeLegibility;
+	font-size:18px;
 }
 a {color:#424299;text-decoration:none}
 a:hover,a:focus {color:#0000ff;text-decoration:underline}
 p a {text-decoration:underline}
-h1 {
-	margin:0;
-	padding:0;
-	color:#666;
-	font-family: 'Play', sans-serif;
-	font-weight:normal;
-	position:absolute;top:5px;left:5px;
-}
 nav {
 	position:fixed;
 	left:0;
@@ -45,8 +41,36 @@ article,.content {
 	position:relative;
 	max-width:900px;
 	min-width:320px;
+	background:#eee;
+	z-index:4;
 }
-h2,h3,h4,h5,h6,.postlist,.date {
+body.home article,body.home .content {
+	margin-top:60px;
+}
+#homelink, body.home h1.entry-title {
+	margin: 0;
+	padding: 0;
+	color: #666;
+	font-weight: normal;
+	position: absolute;
+	top: -75px;
+	left: 5px;
+	text-transform:none;
+	font-size:32px;
+	background:none;
+}
+#homelink:hover {
+	background:none;
+	color:#000;
+}
+body.home #homelink {
+	display:none;
+}
+body.home h1.entry-title {
+	top:-49px;
+	left:-135px;
+}
+h1,h2,h3,h4,h5,h6,.postlist,.date,.author {
 	margin:1em 0 0.5em;
 	padding:0;
 	line-height:0.8em;
@@ -111,9 +135,17 @@ blockquote {
 }
 
 #footer {
-	position:fixed;
-	bottom:10px;
-	left:25px;
+	clear:both;
+	position: fixed;
+	bottom: 1em;
+	left: 140px;
+	max-width:900px;
+	min-width:320px;
+	margin:0;
+	z-index:0;
+}
+#footer p {
+	text-indent:0;
 }
 #githubbanner {
 	position: absolute;
@@ -132,6 +164,14 @@ blockquote {
 .refrence {
 	margin:1em 0 0;
 	text-indent:0;
+}
+
+#footer .license {
+	position:fixed;
+	left: 0;
+	bottom: 1em;
+	margin-left: 0.5em;
+	z-index: 0;
 }
 
 .twitter-tweet-rendered {margin-left:auto;margin-right:auto;min-width:100%!important}
