@@ -1,6 +1,8 @@
 ---
-layout: post  
-title: Dear Bit.ly  
+layout: "post"  
+permalink: "/dear-bitly.html"  
+guid: "http://alt.pathawks.com/dear-bitly"  
+title: "Dear Bit.ly"  
 ---
 Dear Bit.ly,
 

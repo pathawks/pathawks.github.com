@@ -1,6 +1,8 @@
 ---
-title: Google Reader slop?
-layout: post
+layout: "post"  
+permalink: "/reader-dup.html"  
+guid: "http://alt.pathawks.com/reader-dup"  
+title: "Google Reader slop?"  
 ---
 Take a look at the `<head>` code for Google Reader.
 

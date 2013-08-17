@@ -1,7 +1,9 @@
 ---
-title: Whatever happend to...
-layout: post
-hide: True
+layout: "post"
+permalink: "/what-happened.html"  
+guid: "http://alt.pathawks.com/what-happened"  
+hide: True  
+title: "Whatever happend to..."  
 ---
 ### FaceTime
 

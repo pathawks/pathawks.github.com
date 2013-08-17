@@ -1,6 +1,8 @@
 ---
-layout: post
-title: Random Bug
+layout: "post"  
+permalink: "/random-bug.html"  
+guid: "http://alt.pathawks.com/random-bug"  
+title: "Random Bug"  
 ---
 I seem to have stumbled accross a very strange bug.
 

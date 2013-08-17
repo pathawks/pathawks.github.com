@@ -1,6 +1,8 @@
 ---
 hide: True
-layout: post
+layout: "post"  
+permalink: "/01.html"  
+guid: "http://alt.pathawks.com/01"  
 title: Hello World
 ---
 

@@ -1,9 +1,8 @@
 --- 
 layout: "post"  
 date: "2013-05-10 19:15:00-4:00"  
-author:  
-    name: "Pat Hawks"  
-    url: "http://pathawks.com"
+permalink: "/webvtt-observatioins.html"  
+guid: "http://alt.pathawks.com/webvtt-observatioins"  
 title: "WebVTT Observations"  
 ---
 

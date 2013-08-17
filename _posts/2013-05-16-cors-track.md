@@ -1,9 +1,8 @@
 --- 
 layout: "post"  
 date: "2013-05-16 19:45:00-4:00"  
-author:  
-    name: "Pat Hawks"  
-    url: "http://pathawks.com"
+permalink: "/cors-track.html"  
+guid: "http://alt.pathawks.com/cors-track"  
 title: "Cross-Origin Track"  
 ---
 
