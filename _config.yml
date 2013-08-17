@@ -77,26 +77,10 @@ twitter_follow_button: true
 twitter_show_follower_count: false
 twitter_tweet_button: false
 
-# Google +1
-google_plus_one: true
-google_plus_one_size: medium
-
 # Google Plus Profile
 # Hidden: No visible button, just add author information to search results
 googleplus_user: 102057071740749981761
 googleplus_hidden: false
-
-# Pinboard
-pinboard_user: pathawks
-pinboard_count: 3
-
-# Delicious
-delicious_user: pathawks
-delicious_count: 3
-
-# Disqus Comments
-disqus_short_name:
-disqus_show_comment_count: false
 
 # Google Analytics
 google_analytics_tracking_id: UA-1874099-5
