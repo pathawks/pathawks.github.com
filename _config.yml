@@ -6,15 +6,6 @@ url: http://alt.pathawks.com
 title: alt.pathawks.com
 # subtitle: A blogging framework for hackers.
 author: Pat Hawks
-author: 
-    name:       "Pat Hawks"
-    url:        "https://plus.google.com/102057071740749981761?rel=author"
-    image:      "http://pathawks.com/images/pat/apple-300.png"
-    email:      "pat@pathawks.com"
-    twitter:    "pathawks"
-    facebook:   "pathawks"
-    github:     "pathawks"
-    googleplus: "102057071740749981761"
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
 # You can customize the format as defined in
