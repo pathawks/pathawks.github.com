@@ -1,0 +1,22 @@
+---
+layout: minify
+---
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"{% if site.lang %} lang='{{site.lang}}'{% endif %}>
+	<head>
+		{% include head.html %}
+	</head>
+	<body>
+		{{ content }}
+		<footer id='footer'>
+			{% include license.html %}
+		</footer>
+		<h1>{{ site.title }}</h1>
+		<nav>
+			{% include nav.html %}
+		</nav>
+		{% include twitter.html %}
+		{% include github.html %}
+		{% include analytics.html %}
+	</body>
+</html>

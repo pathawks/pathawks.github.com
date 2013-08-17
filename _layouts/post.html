@@ -1,0 +1,22 @@
+---
+layout: master
+---
+{% if page.author.name != site.author %}
+	{% assign guestauthor = ' guestauthor' %}
+{% else %}
+	{% assign guestauthor = '' %}
+{% endif %}
+		<article class='hentry'>
+			<header class='articleheader'>
+				<h2 class='entry-title'>{{page.title}}</h2>
+				{% include author_link.html %}
+				<a href='{{page.url}}' class='bookmark' title='Permalink'>
+					<data value='{{page.date | date_to_xmlschema}}' class='date instapaper_date updated{{ guestauthor }}'>{{ page.date | date_to_string }}</data>
+				</a>
+			</header>
+			<div class='entry-content'>
+				{{ content }}
+				{% if page.mediagazer %}<p class="refrence mediagazer"><a href='{{ page.mediagazer }}'>Read more at Mediagazer</a></p>{% endif %}
+				{% if page.techmeme %}<p class="refrence techmeme"><a href='{{ page.techmeme }}'>Read more at Techmeme</a></p>{% endif %}
+			</div>
+		</article>

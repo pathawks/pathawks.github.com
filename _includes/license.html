@@ -1,0 +1,100 @@
+{% capture license %}
+
+{% if site.license contains '//creativecommons.org/' %}
+<a href="{{ site.license }}">
+  {% if site.license contains '/3.0/' %}
+     {% if site.license contains '/by/' %}
+       <img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" width="88" height="31" />
+     {% endif %}
+     {% if site.license contains '/by-nd/' %}
+       <img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nd/3.0/88x31.png" width="88" height="31" />
+     {% endif %}
+     {% if site.license contains '/by-sa/' %}
+       <img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" width="88" height="31" />
+     {% endif %}
+     {% if site.license contains '/by-nc/' %}
+       <img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l//by-nc/3.0/88x31.png" width="88" height="31" />
+     {% endif %}
+     {% if site.license contains '/by-nc-nd/' %}
+       <img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-nd/3.0/88x31.png" width="88" height="31" />
+     {% endif %}
+     {% if site.license contains '/by-nc-sa/' %}
+       <img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" width="88" height="31" />
+     {% endif %}
+  {% endif %}
+  {% if site.license contains '/publicdomain/zero/' %}
+    <img alt="CC0" style="border-style: none;" src="http://i.creativecommons.org/p/zero/1.0/88x31.png" width="88" height="31" />
+  {% endif %}
+  {% if site.license contains '/publicdomain/mark/' %}
+    <img alt="Public Domain Mark" style="border-style: none;" src="http://i.creativecommons.org/p/mark/1.0/88x31.png" width="88" height="31" />
+  {% endif %}
+</a>
+{% endif %}
+
+<span style='display:none'>
+	<span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">
+		{% if page.title %}
+			{{ page.title }}
+		{% else %}
+			{{ site.title }}
+		{% endif %}
+	</span>
+
+	{% if site.author %} 
+		by <a xmlns:cc="http://creativecommons.org/ns#" {% if site.owner_link %}href="{{ site.owner_link }}" {% endif %}property="cc:attributionName" rel="cc:attributionURL">
+			{{ site.author }}
+		</a>
+	{% endif %} 
+
+	is licensed under a 
+	<a rel="license" href="{{ site.license }}">
+	{% if site.license contains '//creativecommons.org/licenses/' %}
+ 	  Creative Commons
+	{% endif %}
+	{% if site.license contains '/by/' %}
+ 	  Attribution
+	{% endif %}
+	{% if site.license contains '/by-nd/' %}
+ 	  Attribution-NoDerivs
+	{% endif %}
+	{% if site.license contains '/by-sa/' %}
+ 	  Attribution-ShareAlike
+	{% endif %}
+	{% if site.license contains '/by-nc/' %}
+ 	  Attribution-NonCommercial
+	{% endif %}
+	{% if site.license contains '/by-nc-nd/' %}
+ 	  Attribution-NonCommercial-NoDerivs
+	{% endif %}
+	{% if site.license contains '/by-nc-sa/' %}
+ 	  Attribution-NonCommercial-ShareAlike
+	{% endif %}
+	{% if site.license contains '/3.0/' %}
+ 	  3.0
+	{% endif %}
+	{% if site.license contains '/2.5/' %}
+ 	  2.5
+	{% endif %}
+	{% if site.license contains '/2.0/' %}
+ 	  2.0
+	{% endif %}
+	{% if site.license contains '/1.0/' %}
+ 	  1.0
+	{% endif %}
+	{% if site.license contains '//creativecommons.org/licenses/' %}
+ 	  License
+	{% endif %}
+	</a>
+	.
+	{% if page.attribution %}
+		<br />
+		Based on a work at 
+		<a xmlns:dct="http://purl.org/dc/terms/" href="{{ page.attribution }}" rel="dct:source">
+			{{ page.attribution }}
+		</a>.
+	{% endif %}
+</span>
+
+{% endcapture %}{% capture license %}
+{{ license | remove:'	' }}
+{% endcapture %}{{ license | strip_newlines }}

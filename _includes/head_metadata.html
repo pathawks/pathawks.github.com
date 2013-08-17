@@ -1,0 +1,40 @@
+{% if page.date %}
+  <meta name="dc.date.issued" content="{{page.date | date_to_xmlschema}}" />
+{% endif %}
+
+{% if site.license %}
+	<link rel="license" href="{{ site.license }}" />
+{% endif %}
+
+{% if site.copyright %}
+	<link rel="copyright" href="{{ site.copyright }}" />
+{% endif %}
+
+{% capture homeURL %}{{site.root}}index.html{% endcapture %}
+{% if page.url == homeURL %}
+	{% if site.owner_link %}
+		<link rel="me" href="{{ site.owner_link }}" />
+	{% endif %}
+	{% if site.googleplus_user %}
+		<link rel="me" href="https://plus.google.com/{{ site.googleplus_user }}" />
+	{% endif %}
+	{% if site.twitter_user %}
+		<link rel="me" href="http://twitter.com/{{ site.twitter_user }}" />
+	{% endif %}
+	{% if site.github_user %}
+		<link rel="me" href="https://github.com/{{ site.github_user }}" />
+	{% endif %}
+	{% if site.pinboard_user %}
+		<link rel="me" href="http://pinboard.in/u:{{ site.pinboard_user }}/" />
+	{% endif %}
+	{% if site.delicious_user %}
+		<link rel="me" href="https://delicious.com/{{ site.delicious_user }}" />
+	{% endif %}
+{% else %}
+	{% if site.googleplus_user %}
+		<link rel="author" href="https://plus.google.com/{{ site.googleplus_user }}?rel=author" />
+	{% endif %}
+	<link rel="author" href="{{ site.root }}" />
+{% endif %}
+
+{% include ogp.html %}

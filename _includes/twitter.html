@@ -1,0 +1,9 @@
+{% if content contains "class='twitter-tweet'" %}
+  {% unless content contains "//platform.twitter.com/widgets.js" %}
+    <script async="async" src="//platform.twitter.com/widgets.js" charset="utf-8"> </script>
+  {% endunless %}
+{% elsif content contains 'class="twitter-tweet"' %}
+  {% unless content contains "//platform.twitter.com/widgets.js" %}
+    <script async="async" src="//platform.twitter.com/widgets.js" charset="utf-8"> </script>
+  {% endunless %}
+{% endif %}

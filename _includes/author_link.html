@@ -1,0 +1,18 @@
+{% if page.author.name != site.author %}
+	{% assign guestauthor = ' guestauthor' %}
+{% else %}
+	{% assign guestauthor = '' %}
+{% endif %}
+{% if page.author.url %}
+	<a href='{{ page.author.url }}' class='author{{ guestauthor }}' rel='author'>
+{% else if site.googleplus_user %}
+	<a href='https://plus.google.com/{{ site.googleplus_user }}?rel=author' class='author{{ guestauthor }}' rel='author'>
+{% endif %}
+{% if page.author.name %}
+	{{ page.author.name }}
+{% else if site.author %}
+	{{ site.author }}
+{% endif %}
+{% if page.author.url or site.googleplus_user %}
+	</a>
+{% endif %}
