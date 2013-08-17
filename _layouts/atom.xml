@@ -1,0 +1,30 @@
+---
+layout: minify-xml
+---
+<?xml version="1.0" encoding="utf-8"?>
+{% assign feed = 'feed' %}
+{% if page.id != null %}
+	{% assign feed = 'entry' %}
+{% endif %}
+<{{feed}} xmlns="http://www.w3.org/2005/Atom" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#" xmlns:georss='http://www.georss.org/georss' xmlns:thr='http://purl.org/syndication/thread/1.0' xmlns:gd='http://schemas.google.com/g/2005' xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:creativeCommons="http://backend.userland.com/creativeCommonsRssModule">
+<updated>{{ site.time | date_to_xmlschema }}</updated>
+
+{% if site.license %}
+	<link href="{{ site.license }}"  rel="license" type="text/html"/>
+{% endif %}
+
+{% if site.license contains '//creativecommons.org/licenses/' %}
+	<creativeCommons:license>{{ site.license | XMLURL }}</creativeCommons:license>
+{% endif %}
+
+{% if site.icon %}
+	<icon>{{ site.icon | XMLURL }}</icon>
+{% else %}
+	<icon>{{ site.baseurl }}/favicon.ico</icon>
+{% endif %}
+
+{% assign author = site.author %}
+{% include atom-author.xml %}
+
+{{ content }}
+</{{feed}}>

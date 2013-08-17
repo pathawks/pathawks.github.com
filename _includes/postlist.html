@@ -1,7 +1,7 @@
 {% capture postlist %}
 <ol class='postlist'>
-{% for post in site.posts %}{% unless post.hide %}{% unless post.layout == 'page' %}
-<li><a href='{{ post.url }}'>{{ post.title }}</a> <abbr title='{{ post.date | date_to_xmlschema }}' class='postdate'>{{ post.date | date_to_string }}</abbr></li>
-{% endunless %}{% endunless %}{% endfor %}
+{% for post in site.posts %}
+{% include post-li.html %}
+{% endfor %}
 </ol>
 {% endcapture %}{{ postlist | strip_newlines }}

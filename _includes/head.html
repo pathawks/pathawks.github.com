@@ -2,6 +2,8 @@
 
 {% include head_charset.html %}
 {% include head_title.html %}
+{% include head_canonical.html %}
+{% include head_nextprev.html %}
 {% include head_metadata.html %}
 {% include head_rss.html %}
 {% include head_stylesheets.html %}
@@ -9,5 +11,6 @@
 {% include viewport.html %}
 {% include modernizr.html %}
 {% include mathjax.html %}
+{% include twitter.html %}
 
-{% endcapture %}{{ header | strip_newlines }}
+{% endcapture %}{{ header | strip_newlines | replace:'	',' ' | replace:'  ',' ' | replace:'  ',' ' | replace:'  ',' ' | replace:'  ',' ' | replace:'  ',' ' | replace:'  ',' ' | replace:'  ',' ' | replace:'  ',' ' | replace:'  ',' ' | replace:'> <','><' }}

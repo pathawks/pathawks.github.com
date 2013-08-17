@@ -1,0 +1,2 @@
+{% capture canonical %}{{ site.url }}/{{ page.url | replace:'/index.html','/' }}{% endcapture %}
+<link rel="canonical" href="{{ canonical | replace:'//','/' | replace:':/','://' }}"/>

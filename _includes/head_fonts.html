@@ -1,6 +1,7 @@
+{% comment %}
 <script type="text/javascript">
   WebFontConfig = {
-    google: { families: [ 'Source+Sans+Pro:400,700,400italic,700italic:latin', 'Source+Code+Pro:400,700:latin', 'Play::latin' ] }
+    google: { families: [ {% for font in site.fonts.google %}'{{ font.name | replace:' ','+' }}:{{ font.styles | join:',' }}:latin'{% unless forloop.last %},{% endunless %}{% endfor %} ] }
   };
   (function() {
     var wf = document.createElement('script');
@@ -12,5 +13,10 @@
     s.parentNode.insertBefore(wf, s);
   })(); </script>
 <noscript>
-<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic,700italic|Source+Code+Pro:400,700|Play' rel='stylesheet' type='text/css'>
+{% endcomment %}
+
+<link href='http://fonts.googleapis.com/css?family={% for font in site.fonts.google %}{{ font.name | replace:' ','+' }}{% if font.styles %}:{{ font.styles | join:',' }}{% endif %}{% unless forloop.last %}|{% endunless %}{% endfor %}' rel='stylesheet' type='text/css' />
+
+{% comment %}
 </noscript>
+{% endcomment %}

@@ -1,7 +1,6 @@
-<title>
-  {% if page.title %}
-		{{ page.title }} - {{ site.title }}
-	{% else %}
-		{{ site.title }}
-	{% endif %}
-</title>
+{% if page.title %}
+<title>{{ page.title | textilize | strip_html }} - {{ site.title }}</title>
+{% else %}
+<title>{{ site.title }}</title>
+{% endif %}
+

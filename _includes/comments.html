@@ -1,0 +1,39 @@
+{% capture content %}{% if page.comments.size > 0 %}
+	<meta itemprop="interactionCount" content="UserComments:{{ page.comments.size }}" />
+	<div id="disqus_thread">
+	<div id="dsq-content">
+		<ul id="dsq-comments">
+			{% for comment in page.comments %}
+				<li id="{{ comment.id }}" class="dsq-comment dsq-clearfix" itemprop="comment" itemscope="itemscope" itemtype="http://schema.org/UserComments">
+					<div class="dsq-avatar dsq-tt">
+						<a href="{{ comment.author.url }}">
+							<img src="{{ comment.author.image }}" class="" alt="{{ comment.author.name }}" />
+						</a>
+					</div>
+					<div class="dsq-comment-body">
+						<div class="dsq-comment-header">
+							<a href="{{ comment.author.url }}" class="dsq-commenter-name" rel="nofollow" itemprop="creator">
+								{{ comment.author.name }}
+							</a>
+						</div>
+						<div class="dsq-comment-message">
+							<div class="dsq-comment-text" itemprop="commentText">
+								<p>{{ comment.content }}</p>
+							</div>
+						</div>
+						<div class="dsq-comment-footer">
+							<ul class="dsq-comment-meta">
+								<li>
+									<a href="{{ page.permalink }}#{{ comment.id }}" title="Link to comment" itemprop="url">
+										<time datetime='{{ comment.date | date_to_xmlschema }}' itemprop="commentTime">{{ comment.date | date: '%b %d %Y' }}</time>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
+	</div>
+{% endif %}{% endcapture %}{{ content | replace:'	',' ' | replace:'  ',' ' | replace:'  ',' ' | replace:'  ',' ' | replace:'  ',' ' | replace:'  ',' ' | replace:'  ',' ' | replace:'  ',' ' | replace:'  ',' ' | replace:'  ',' ' | replace:'  ',' ' | replace:'  ',' ' | replace:'  ',' ' | replace:'  ',' ' | replace:'  ',' ' | replace:'  ',' ' | replace:'  ',' ' | replace:'  ',' ' | replace:'  ',' ' | replace:'  ',' ' | replace:'  ',' ' | replace:'  ',' ' | replace:'  ',' ' | replace:'  ',' ' | replace:'  ',' ' | replace:'  ',' ' | replace:'  ',' ' | replace:'  ',' ' | replace:'  ',' ' | replace:'  ',' ' | replace:'  ',' ' | replace:'  ',' ' | replace:'  ',' ' }}

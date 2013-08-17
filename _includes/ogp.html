@@ -12,7 +12,11 @@
 {% endif %}
 
 {% if page.url %}
-	<meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+	<meta property="og:url" content="{{ site.url }}{{ page.url | replace:'/index.html','/' }}" />
+{% endif %}
+
+{% if page.thumbnail %}
+	<meta property="og:image" content="{{ page.thumbnail }}" />
 {% endif %}
 
 {% if page.date %}

@@ -1,0 +1,6 @@
+{% if page.previous %}
+	<link rel="prev" href="{{ site.url }}{{ page.previous.url }}" />
+{% endif %}
+{% if page.next %}
+	<link rel="next" href="{{ site.url }}{{ page.next.url }}" />
+{% endif %}

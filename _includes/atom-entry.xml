@@ -1,0 +1,31 @@
+{% if post.guid %}
+	<id>{{ post.guid }}/</id>
+{% else %}
+	<id>{{ site.production_url }}{{ post.url }}/</id>
+{% endif %}
+<updated>{{ post.date | date_to_xmlschema }}</updated>
+<title type='text'>{{ post.title | xml_escape }}</title>
+<link href="{{ site.production_url }}{{ post.url }}" />
+<link href="{{ site.production_url }}{{ post.url }}" rel="alternate" type="text/html" />
+
+{% assign author = post.author %}
+{% include atom-author.xml %}
+
+<content type="html">{{ post.content | feedfilter | xml_escape }}</content>
+{% if post.thumbnail %}
+<media:thumbnail xmlns:media='http://search.yahoo.com/mrss/' url='{{ post.thumbnail | XMLURL }}'/>
+{% endif %}
+{% if post.location %}
+	{% if post.location.name %}
+		<georss:featurename>{{ post.location.name }}</georss:featurename>
+	{% endif %}
+	{% if post.location.latitude and post.location.longitude %}
+		<georss:point>{{post.location.latitude}} {{post.location.longitude}}</georss:point>
+		{% if post.location.box %}
+			<georss:box>{{ post.location.box | join ' ' }}</georss:box>
+		{% endif %}
+		<geo:lat>{{ post.location.latitude }}</geo:lat>
+		<geo:long>{{ post.location.longitude }}</geo:long>
+	{% endif %}
+
+{% endif %}
