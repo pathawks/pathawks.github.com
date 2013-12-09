@@ -1,24 +1,24 @@
 {% capture license %}
 {% if site.license contains '//creativecommons.org/' %}
-<a rel='license' href="{{ site.license }}" rel='license' class='license' id='license'>
-  {% if site.license contains '/3.0/' %}
+<a href="{{ site.license }}" class='license' id='license'>
+  {% if site.license contains '/3.0/' or site.license contains '/4.0/' %}
      {% if site.license contains '/by/' %}
-       <img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by/3.0/88x31.png" width="88" height="31" />
+       <img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by/4.0/88x31.png" width="88" height="31" />
      {% endif %}
      {% if site.license contains '/by-nd/' %}
-       <img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by-nd/3.0/88x31.png" width="88" height="31" />
+       <img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by-nd/4.0/88x31.png" width="88" height="31" />
      {% endif %}
      {% if site.license contains '/by-sa/' %}
-       <img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by-sa/3.0/88x31.png" width="88" height="31" />
+       <img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by-sa/4.0/88x31.png" width="88" height="31" />
      {% endif %}
      {% if site.license contains '/by-nc/' %}
-       <img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l//by-nc/3.0/88x31.png" width="88" height="31" />
+       <img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by-nc/4.0/88x31.png" width="88" height="31" />
      {% endif %}
      {% if site.license contains '/by-nc-nd/' %}
-       <img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by-nc-nd/3.0/88x31.png" width="88" height="31" />
+       <img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" width="88" height="31" />
      {% endif %}
      {% if site.license contains '/by-nc-sa/' %}
-       <img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" width="88" height="31" />
+       <img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" width="88" height="31" />
      {% endif %}
   {% endif %}
   {% if site.license contains '/publicdomain/zero/' %}
@@ -40,12 +40,8 @@
 	</span>
 
 	{% if site.author.name %} 
-		by <a xmlns:cc="http://creativecommons.org/ns#" {% if site.owner_link %}href="{{ site.owner_link }}" {% endif %}property="cc:attributionName" rel="cc:attributionURL">
+		by <a xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName" rel="cc:attributionURL" {% if site.owner_link %}href="{{ site.owner_link }}" {% endif %}>
 			{{ site.author.name }}
-		</a>
-	{% elsif site.author %} 
-		by <a xmlns:cc="http://creativecommons.org/ns#" {% if site.owner_link %}href="{{ site.owner_link }}" {% endif %}property="cc:attributionName" rel="cc:attributionURL">
-			{{ site.author }}
 		</a>
 	{% endif %} 
 
@@ -71,6 +67,9 @@
 	{% endif %}
 	{% if site.license contains '/by-nc-sa/' %}
  	  Attribution-NonCommercial-ShareAlike
+	{% endif %}
+	{% if site.license contains '/4.0/' %}
+ 	  4.0 International
 	{% endif %}
 	{% if site.license contains '/3.0/' %}
  	  3.0
