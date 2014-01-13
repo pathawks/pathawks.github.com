@@ -8,19 +8,20 @@ layout: minify-xml
 {% endif %}
 <{{feed}} xmlns="http://www.w3.org/2005/Atom" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#" xmlns:georss='http://www.georss.org/georss' xmlns:thr='http://purl.org/syndication/thread/1.0' xmlns:gd='http://schemas.google.com/g/2005' xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:creativeCommons="http://backend.userland.com/creativeCommonsRssModule">
 <updated>{{ site.time | date_to_xmlschema }}</updated>
+<generator uri="http://jekyllrb.com/" version="{{ jekyll.version }}">Jekyll</generator>
 
 {% if site.license %}
 	<link href="{{ site.license }}"  rel="license" type="text/html"/>
 {% endif %}
 
 {% if site.license contains '//creativecommons.org/licenses/' %}
-	<creativeCommons:license>{{ site.license | XMLURL }}</creativeCommons:license>
+	<creativeCommons:license>{{ site.license | xml_escape }}</creativeCommons:license>
 {% endif %}
 
 {% if site.icon %}
-	<icon>{{ site.icon | XMLURL }}</icon>
+	<icon>{{ site.icon | xml_escape }}</icon>
 {% else %}
-	<icon>{{ site.baseurl }}/favicon.ico</icon>
+	<icon>{{ site.production_url }}/favicon.ico</icon>
 {% endif %}
 
 {% assign author = site.author %}

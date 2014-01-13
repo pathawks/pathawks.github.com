@@ -10,10 +10,10 @@
 		<email>{{ author.email | xml_escape }}</email>
 		{% endif %}
 		{% if author.url %}
-		<uri>{{ author.url | XMLURL }}</uri>
+		<uri>{{ author.url | xml_escape }}</uri>
 		{% endif %}
 		{% if author.image %}
-		<gd:image rel='http://schemas.google.com/g/2005#thumbnail' width='32' height='32' src='{{ author.image | XMLURL }}'/>
+		<gd:image rel='http://schemas.google.com/g/2005#thumbnail' width='32' height='32' src='{{ author.image | xml_escape }}'/>
 		{% endif %}
 	</author>
 {% endif %}

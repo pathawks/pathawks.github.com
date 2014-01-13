@@ -9,11 +9,11 @@
 <link href="{{ site.production_url }}{{ post.url }}" rel="alternate" type="text/html" />
 
 {% assign author = post.author %}
-{% include atom-author.xml %}
+{% include atom/author.xml %}
 
 <content type="html">{{ post.content | feedfilter | xml_escape }}</content>
 {% if post.thumbnail %}
-<media:thumbnail xmlns:media='http://search.yahoo.com/mrss/' url='{{ post.thumbnail | XMLURL }}'/>
+<media:thumbnail xmlns:media='http://search.yahoo.com/mrss/' url='{{ post.thumbnail | xml_escape }}'/>
 {% endif %}
 {% if post.location %}
 	{% if post.location.name %}
