@@ -24,6 +24,9 @@ owner_link:  http://pathawks.com
 license:   http://creativecommons.org/licenses/by/4.0/deed.en_US
 copyright: http://creativecommons.org/licenses/by/4.0/deed.en_US
 
+timezone: "America/Chicago"
+encoding: "UTF-8"
+
 # ----------------------- #
 #    Jekyll & Plugins     #
 # ----------------------- #

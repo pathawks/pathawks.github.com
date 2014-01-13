@@ -25,7 +25,7 @@ layout: minify-xml
 {% endif %}
 
 {% assign author = site.author %}
-{% include atom-author.xml %}
+{% include atom/author.xml %}
 
 {{ content }}
 </{{feed}}>

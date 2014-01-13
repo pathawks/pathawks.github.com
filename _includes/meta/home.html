@@ -1,0 +1,15 @@
+{% include meta/foaf.html %}
+
+{% for account in site.data.me.accounts %}
+<link rel='sameAs' href='{{ account.url }}' />
+{% endfor %}
+
+<meta itemprop='name' content='{{ site.data.me.nickname }}' />
+<meta itemprop='familyName' content='{{ site.data.me.familyname }}' />
+<meta itemprop='givenName' content='{{ site.data.me.givenname }}' />
+<link itemprop='image' href='{{ site.data.me.avatar }}' />
+<meta itemprop='url' content='{{ site.data.me.homepage }}' />
+
+<link itemprop='spouse' href='http://www.christinehawks.com/' />
+
+<link rel="alternate" type="text/directory" title="vCard" href="http://en.gravatar.com/pathawks.vcf" />
