@@ -1,0 +1,119 @@
+name: "Patrick Hawks"
+id: "me"
+givenname: "Patrick"
+familyname: "Hawks"
+nickname: "Pat Hawks"
+gender: "male"
+title: "Mr."
+mbox:
+  - "pat@pathawks.com"
+mbox_sha1sum:
+  - "30097b5a73b46b7ecd1267c846a0701ebdd0cee1"
+weblog: "http://pathawks.com/"
+homepage: "http://pathawks.com/"
+avatar: "http://pathawks.com/images/pat/apple-300.png"
+accounts:
+  -
+    url: "http://www.flickr.com/people/pathawks"
+    service: "http://www.flickr.com/"
+    label: "Flickr"
+    user: "pathawks"
+  -
+    url: "http://twitter.com/PatHawks"
+    service: "http://twitter.com/"
+    label: "Twitter"
+    user: "PatHawks"
+  -
+    url: "http://www.youtube.com/user/PatHawkscom"
+    service: "http://www.youtube.com/"
+    label: "YouTube"
+    user: "PatHawkscom"
+  -
+    url: "http://github.com/pathawks"
+    service: "http://github.com/"
+    label: "GitHub"
+    user: "pathawks"
+  -
+    url: "http://en.gravatar.com/pathawks"
+    service: "http://gravatar.com/"
+    label: "Gravatar"
+    user: "pathawks"
+  -
+    url: "http://foursquare.com/user/102025"
+    service: "http://foursquare.com/"
+    label: "Foursquare"
+    user: "102025"
+  -
+    url: "http://steamcommunity.com/id/pathawks/"
+    service: "http://steamcommunity.com/"
+    label: "Steam"
+    user: "pathawks"
+    type: "http://xmlns.com/foaf/0.1/OnlineGamingAccount"
+  -
+    url: "https://www.facebook.com/pathawks"
+    service: "https://www.facebook.com/"
+    label: "Facebook"
+    user: "pathawks"
+  -
+    url: "https://delicious.com/pathawks"
+    service: "https://delicious.com/"
+    label: "Delicious"
+    user: "pathawks"
+  -
+    url: "http://www.ticalc.org/archives/files/authors/41/4157.html"
+    service: "http://www.ticalc.org/"
+    label: "ticalc.org"
+    user: "Pat Hawks"
+  -
+    url: "http://www.fitbit.com/user/27GW6B"
+    service: "http://www.fitbit.com/"
+    label: "FitBit"
+    user: "Pat H."
+  -
+    url: "https://plus.google.com/+PatHawks"
+    service: "https://plus.google.com/"
+    label: "Google+"
+    user: "+PatHawks"
+  -
+    url: "https://live.xbox.com/en-US/Profile?gamertag=PatHawks"
+    service: "http://www.xbox.com/live/"
+    label: "Xbox Live"
+    user: "PatHawks"
+    type: "http://xmlns.com/foaf/0.1/OnlineGamingAccount"
+  -
+    url: "http://trees.ancestry.com/tree/18685877/person/696760254"
+    service: "https://ancestry.com/"
+    label: "Ancestry.com"
+    user: "pathawks"
+knows:
+  -
+    name: "Christine Hawks"
+    givenname: "Christine"
+    familyname: "Hawks"
+    gender: "female"
+    title: "Mrs."
+    weblog: "http://www.christinehawks.com/"
+    homepage: "http://www.christinehawks.com/"
+    mbox_sha1sum:
+      - "50c0e4857aa1e3ad997fc2e2a534c6b5469d8762"
+    accounts:
+      -
+        url: "http://twitter.com/ChristineJHawks"
+        service: "http://twitter.com/"
+        label: "Twitter"
+        user: "ChristineJHawks"
+      -
+        url: "https://www.facebook.com/christinejwarner"
+        service: "https://www.facebook.com/"
+        label: "Facebook"
+        user: "christinejwarner"
+      -
+        url: "http://www.flickr.com/people/christinehawks"
+        service: "http://www.flickr.com/"
+        label: "Flickr"
+        user: "christinehawks"
+      -
+        url: "https://delicious.com/christinejwarner"
+        service: "https://delicious.com/"
+        label: "Delicious"
+        user: "christinejwarner"

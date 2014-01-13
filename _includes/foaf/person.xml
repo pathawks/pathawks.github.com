@@ -1,0 +1,99 @@
+{% assign person = include.person %}
+{% if person %}
+<foaf:Person{% if person.id %} rdf:ID="{{ person.id }}"{% endif %}>
+{% if person.name %}
+	<foaf:name>{{ person.name }}</foaf:name>
+{% endif %}
+
+{% if person.givenname %}
+	<foaf:givenname>{{ person.givenname }}</foaf:givenname>
+	<foaf:firstName>{{ person.givenname }}</foaf:firstName>
+{% endif %}
+
+{% if person.familyname %}
+	<foaf:surname>{{ person.familyname }}</foaf:surname>
+	<foaf:familyName>{{ person.familyname }}</foaf:familyName>
+{% endif %}
+
+{% if person.nickname %}
+  <foaf:nick>{{ person.nickname }}</foaf:nick>
+  <contact:knownAs>{{ person.nickname }}</contact:knownAs>
+{% endif %}
+
+{% if person.gender %}
+	<foaf:gender>{{ person.gender | downcase }}</foaf:gender>
+{% endif %}
+
+{% if person.title %}
+	<foaf:title>{{ person.title }} </foaf:title>
+{% endif %}
+
+{% if person.name %}
+	<foaf:mbox rdf:resource="{{ person.name }}"/>
+{% endif %}
+
+{% if person.mbox %}
+{% for mbox in person.mbox %}
+	<foaf:mbox rdf:resource="{{ mbox }}"/>
+{% endfor %}
+{% endif %}
+
+{% if person.mbox_sha1sum %}
+{% for mboxsha in person.mbox_sha1sum %}
+  <foaf:mbox_sha1sum>{{ mboxsha }}</foaf:mbox_sha1sum>
+{% endfor %}
+{% endif %}
+
+{% if person.weblog %}
+  <foaf:weblog rdf:resource="{{ person.weblog }}"/>
+{% endif %}
+
+{% if person.homepage %}
+  <foaf:homepage rdf:resource="{{ person.homepage }}"/>
+  <contact:preferredURI>{{ person.homepage }}</contact:preferredURI>
+{% endif %}
+
+{% if person.avatar %}
+	<foaf:img rdf:resource="{{ person.avatar }}" />
+  <foaf:depiction rdf:resource="{{ person.avatar }}"/>
+{% endif %}
+
+{% if person.accounts %}
+{% for account in person.accounts %}
+	<foaf:account>
+	
+{% if account.url %}
+		<foaf:OnlineAccount rdf:about="{{ account.url }}">
+{% endif %}
+
+{% if account.type %}
+			<rdf:type rdf:resource="{{ account.type }}"/>
+{% endif %}
+
+{% if account.service %}
+			<foaf:acocuntServiceHomepage rdf:resource="{{ account.service }}"/>
+{% endif %}
+
+{% if account.user %}
+			<foaf:accountName>{{ account.user }}</foaf:accountName>
+{% endif %}
+
+{% if account.label %}
+			<rdfs:label>{{ account.label }}</rdfs:label>
+{% endif %}
+
+		</foaf:OnlineAccount>
+	</foaf:account>
+{% endfor %}
+{% endif %}
+
+{% if person.knows %}
+{% for contact in person.knows %}
+	<foaf:knows>
+	  {% include foaf/person.xml person=contact %}
+	</foaf:knows>
+{% endfor %}
+{% endif %}
+
+</foaf:Person>
+{% endif %}

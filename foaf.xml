@@ -1,0 +1,8 @@
+---
+layout: rdf
+---
+<foaf:PersonalProfileDocument rdf:about="http://pathawks.com/foaf.xml">
+	<foaf:maker rdf:resource="#me"/>
+	<foaf:primaryTopic rdf:resource="#me"/>
+</foaf:PersonalProfileDocument>
+{% include foaf/person.xml person=site.data.me %}
