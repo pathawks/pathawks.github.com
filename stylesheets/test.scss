@@ -1,0 +1,94 @@
+---
+note: "This is just a test of Jekyll's SCSS parser"
+---
+// Colors
+$comment:  #999988;
+$special:  #999999;
+$generic:  #000000;
+$keyword:  #000000;
+$string:   #dd1144;
+$name:     #990000;
+$number:   #009999;
+$variable: #008080;
+
+// Generic Styles
+%comment  { color: $comment; font-style: italic }
+%special  { color: $special; font-weight: bold; font-style: italic }
+%generic  { color: $generic }
+%keyword  { color: $keyword; font-weight: bold }
+%string   { color: $string }
+%name     { color: $name; font-weight: bold }
+%number   { color: $number }
+%variable { color: $variable }
+
+.highlight  { background: #fffffd;
+
+	.k   { @extend %keyword } // Keyword
+	.kc  { @extend %keyword } // Keyword.Constant
+	.kd  { @extend %keyword } // Keyword.Declaration
+	.kn  { @extend %keyword } // Keyword.Namespace
+	.kp  { @extend %keyword } // Keyword.Pseudo
+	.kr  { @extend %keyword } // Keyword.Reserved
+	.kt  { @extend %keyword } // Keyword.Type
+
+	.o   { @extend %keyword } // Operator
+	.ow  { @extend %keyword } // Operator.Word
+
+	.c   { @extend %comment } // Comment
+	.cm  { @extend %comment } // Comment.Multiline
+	.c1  { @extend %comment } // Comment.Single
+
+	.cp  { @extend %special } // Comment.Preproc
+	.cs  { @extend %special } // Comment.Special
+
+	.ne  { @extend %name } // Name.Exception
+	.nf  { @extend %name } // Name.Function
+	.nl  { @extend %name } // Name.Label
+
+	.m   { @extend %number } // Literal.Number
+	.mf  { @extend %number } // Literal.Number.Float
+	.mh  { @extend %number } // Literal.Number.Hex
+	.mi  { @extend %number } // Literal.Number.Integer
+	.il  { @extend %number } // Literal.Number.Integer.Long
+	.mo  { @extend %number } // Literal.Number.Oct
+
+	.s   { @extend %string } // Literal.String
+	.sb  { @extend %string } // Literal.String.Backtick
+	.sc  { @extend %string } // Literal.String.Char
+	.sd  { @extend %string } // Literal.String.Doc
+	.s2  { @extend %string } // Literal.String.Double
+	.se  { @extend %string } // Literal.String.Escape
+	.sh  { @extend %string } // Literal.String.Heredoc
+	.si  { @extend %string } // Literal.String.Interpol
+	.sx  { @extend %string } // Literal.String.Other
+	.s1  { @extend %string } // Literal.String.Single
+
+	.na  { @extend %variable } // Name.Attribute
+	.no  { @extend %variable } // Name.Constant
+	.nv  { @extend %variable } // Name.Variable
+	.vc  { @extend %variable } // Name.Variable.Class
+	.vg  { @extend %variable } // Name.Variable.Global
+	.vi  { @extend %variable } // Name.Variable.Instance
+
+	.err { color: #a61717; background-color: #e3d2d2 } // Error
+	.gd  { @extend %generic; background-color: #ffdddd } // Generic.Deleted
+	.gi  { @extend %generic; background-color: #ddffdd } // Generic.Inserted
+	.gr  { color: #aa0000 } // Generic.Error
+	.gh  { color: #999999 } // Generic.Heading
+	.go  { color: #888888 } // Generic.Output
+	.gp  { color: #555555 } // Generic.Prompt
+	.gs  { font-weight: bold } // Generic.Strong
+	.ge  { @extend %generic; font-style: italic } // Generic.Emph
+	.gu  { color: #aaaaaa } // Generic.Subheading
+	.gt  { color: #aa0000 } // Generic.Traceback
+	.nb  { color: #0086B3 } // Name.Builtin
+	.nc  { color: #445588; font-weight: bold } // Name.Class
+	.nd  { color: #3c5d5d; font-weight: bold } // Name.Decorator
+	.ni  { color: #800080 } // Name.Entity
+	.nn  { color: #555555 } // Name.Namespace
+	.nt  { color: #000080 } // Name.Tag
+	.sr  { color: #009926 } // Literal.String.Regex
+	.ss  { color: #990073 } // Literal.String.Symbol
+	.bp  { color: #999999 } // Name.Builtin.Pseudo
+	.w   { color: #bbbbbb } // Text.Whitespace
+}
