@@ -88,7 +88,10 @@ div.highlight, pre code {
 	overflow-x:scroll;
 	-webkit-overflow-scrolling:touch;
 }
-pre code {background:#fff}
+pre code {
+	background:#fff;
+	tab-size:2;
+}
 
 div.highlight pre code,.gist pre code {margin: 0;border:0;overflow-x:visible;background:transparent}
 
