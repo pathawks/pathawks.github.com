@@ -7,21 +7,14 @@
 	<meta property="og:type" content="website" />	
 {% endif %}
 
-{% if site.title %}
-	<meta property="og:site_name" content="{{ site.title }}" />
-{% endif %}
+{% include meta.html property="og:site_name" content=site.title %}
+{% include meta.html property="og:image" content=page.thumbnail %}
 
-{% if page.url %}
-	<meta property="og:url" content="{{ site.url }}{{ page.url | replace:'/index.html','/' }}" />
-{% endif %}
+{% capture page_url %}{{ site.url }}{{ page.url | replace:'/index.html','/' }}{% endcapture %}
+{% include meta.html property="og:url" content=page_url %}
 
-{% if page.thumbnail %}
-	<meta property="og:image" content="{{ page.thumbnail }}" />
-{% endif %}
-
-{% if page.date %}
-	<meta property="article:published_time" content="{{page.date | date_to_xmlschema}}" />
-{% endif %}
+{% capture page_date %}{{page.date | date_to_xmlschema}}{% endcapture %}
+{% include meta.html property="article:published_time" content=page_date %}
 
 {% if site.owner_link %}
 	<meta property="article:author" content="{{ site.owner_link }}" />
