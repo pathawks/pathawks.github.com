@@ -7,7 +7,11 @@ author:
 title: "WebVTT Observations"  
 ---
 
-**UPDATE: See clarification from WebVTT at the bottom of this post.**
+### Update
+
+The WebVTT Draft Spec has been updated to allow [metadata headers](http://dev.w3.org/html5/webvtt/#dfn-webvtt-metadata-header). This corrects all the issues outlined in this post. <span>:)</span>
+
+***
 
 According to the [WebVTT Draft Spec](http://dev.w3.org/html5/webvtt/#dfn-webvtt-file-body), a WebVTT file must start with the string "WEBVTT" followed by some text that **does not** include a line break, followed by two line breaks. This pretty much kills the idea of including header metadata. Yet, WebVTT files produced by YouTube break this rule and include some extra data in the header (along with line breaks), breaking the spec.
 
