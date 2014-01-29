@@ -1,11 +1,13 @@
-{% assign tag='meta' %}{% if include.href %}{% assign tag='link' %}{% endif %}{% capture meta_tag %}
+{% assign tag='meta' %}{% if include.href %}{% assign tag='link' %}{% endif %}{% capture meta_tag %}{% assign empty_tag='false' %}
 <{{ tag }}
 
 {% for item in include %}
 {% if item[1] %}
  {{ item[0] }}="{{ item[1] }}"
+{% else %}
+{% assign empty_tag='True' %}
 {% endif %}
 {% endfor %}
 
-/>
-{% endcapture %}{{ meta_tag | strip_newlines }}
+ />
+{% endcapture %}{% unless empty_tag=='True' %}{{ meta_tag | strip_newlines }}{% endunless %}
