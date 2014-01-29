@@ -1,11 +1,12 @@
 {% capture header %}
 
 {% if page.title %}
-	<meta property="og:type" content="article" />
-	<meta property="og:title" content="{{ page.title }}" />
+<meta property="og:type" content="article" />
 {% else %}
-	<meta property="og:type" content="website" />	
+<meta property="og:type" content="website" />	
 {% endif %}
+
+{% include meta.html property="og:title" content=page.title %}
 
 {% include meta.html property="og:site_name" content=site.title %}
 {% include meta.html property="og:image" content=page.thumbnail %}
@@ -13,11 +14,10 @@
 {% capture page_url %}{{ site.url }}{{ page.url | replace:'/index.html','/' }}{% endcapture %}
 {% include meta.html property="og:url" content=page_url %}
 
-{% capture page_date %}{{page.date | date_to_xmlschema}}{% endcapture %}
+{% if page.date %}{% capture page_date %}{{page.date | date_to_xmlschema}}{% endcapture %}{% endif %}
 {% include meta.html property="article:published_time" content=page_date %}
 
-{% if site.owner_link %}
-	<meta property="article:author" content="{{ site.owner_link }}" />
-{% endif %}
+{% include meta.html property="article:author" content=page.author.url %}
+{% include meta.html rel="author" href=page.author.url %}
 
 {% endcapture %}{{ header | strip_newlines }}
