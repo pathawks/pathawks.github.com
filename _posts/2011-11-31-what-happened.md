@@ -1,5 +1,5 @@
 ---
-title: Whatever happend to...
+title: Whatever happened to...
 layout: post
 hide: True
 ---
